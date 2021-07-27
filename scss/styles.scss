@@ -8,6 +8,44 @@ $light-gray-secondary: #bdbdbd;
 	padding: 0;
 }
 
+body {
+	align-items: center;
+	background: #f5f9fa;
+	display: flex;
+	flex-direction: column;
+}
+
+nav {
+	align-items: center;
+	background: #ffffff;
+	box-shadow: 0px 8px 40px 0px rgba(34, 69, 82, 0.15);
+	display: flex;
+	flex-direction: row;
+	height: 69px;
+	justify-content: space-between;
+	margin: 30px 190px 40px 189px;
+	width: 901px;
+
+	.brand {
+		color: #141414;
+		font-size: 24px;
+		font-family: "Do Hyeon", sans-serif;
+		margin: 23px 288px 24px 24px;
+	}
+
+	.nav-links {
+		a {
+			color: $light-gray-secondary;
+			font-family: "Kanit", sans-serif;
+			font-size: 14px;
+			margin: 23px 48px 24px 0px;
+			&.active {
+				color: $light-pink;
+			}
+		}
+	}
+}
+
 /*modal*/
 .modal {
 	.modal-dialog {
@@ -71,6 +109,7 @@ $light-gray-secondary: #bdbdbd;
 	}
 }
 
+// buttons
 .btn-add-pet-to-shelter,
 .btn-adopt-pet,
 .btn-like-pet,
@@ -107,15 +146,16 @@ $light-gray-secondary: #bdbdbd;
 		flex-direction: row;
 
 		p {
+			color: $light-gray-secondary;
 			margin-top: 0px !important;
 			margin-left: 0px !important;
 			font-family: "Kanit", sans-serif;
 			font-size: 18px;
-			width: 100px !important;
 			height: 22px;
-			text-align: right;
 			margin-right: 23px;
-			color: $light-gray-secondary;
+
+			text-align: right;
+			width: 100px !important;
 		}
 
 		.button-group {
@@ -140,47 +180,6 @@ $light-gray-secondary: #bdbdbd;
 	}
 }
 
-body {
-	background: #f5f9fa;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-// body * {
-// 	outline: 1px dashed red;
-// }
-
-nav {
-	align-items: center;
-	background: #ffffff;
-	box-shadow: 0px 8px 40px 0px rgba(34, 69, 82, 0.15);
-	display: flex;
-	flex-direction: row;
-	height: 69px;
-	justify-content: space-between;
-	margin: 30px 190px 40px 189px;
-	width: 901px;
-
-	.brand {
-		color: #141414;
-		font-size: 24px;
-		font-family: "Do Hyeon", sans-serif;
-		margin: 23px 288px 24px 24px;
-	}
-
-	.nav-links {
-		a {
-			color: $light-gray-secondary;
-			font-family: "Kanit", sans-serif;
-			font-size: 14px;
-			margin: 23px 48px 24px 0px;
-			&.active {
-				color: $light-pink;
-			}
-		}
-	}
-}
 .banner {
 	font-family: "Do Hyeon", sans-serif;
 	.banner-text {
@@ -273,12 +272,11 @@ main {
 
 footer {
 	color: $light-gray-secondary;
-	text-align: center;
-
 	font-family: "Kanit", sans-serif;
 	font-size: 14px;
 	letter-spacing: 2px;
 	margin: 50px 0px;
+	text-align: center;
 	a {
 		color: $light-pink;
 	}

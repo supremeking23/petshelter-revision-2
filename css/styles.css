@@ -7,6 +7,60 @@
   padding: 0;
 }
 
+body {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f5f9fa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+nav {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 8px 40px 0px rgba(34, 69, 82, 0.15);
+          box-shadow: 0px 8px 40px 0px rgba(34, 69, 82, 0.15);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 69px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 30px 190px 40px 189px;
+  width: 901px;
+}
+
+nav .brand {
+  color: #141414;
+  font-size: 24px;
+  font-family: "Do Hyeon", sans-serif;
+  margin: 23px 288px 24px 24px;
+}
+
+nav .nav-links a {
+  color: #bdbdbd;
+  font-family: "Kanit", sans-serif;
+  font-size: 14px;
+  margin: 23px 48px 24px 0px;
+}
+
+nav .nav-links a.active {
+  color: #ff5c4c;
+}
+
 /*modal*/
 .modal .modal-dialog .modal-content .modal-header {
   border-bottom: none;
@@ -115,15 +169,15 @@
 }
 
 .details-pet-modal .modal-footer p {
+  color: #bdbdbd;
   margin-top: 0px !important;
   margin-left: 0px !important;
   font-family: "Kanit", sans-serif;
   font-size: 18px;
-  width: 100px !important;
   height: 22px;
-  text-align: right;
   margin-right: 23px;
-  color: #bdbdbd;
+  text-align: right;
+  width: 100px !important;
 }
 
 .details-pet-modal .modal-footer .button-group {
@@ -147,60 +201,6 @@
 .btn-add-pet-process i {
   margin-left: 10px;
   margin-right: 10px;
-}
-
-body {
-  background: #f5f9fa;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-nav {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #ffffff;
-  -webkit-box-shadow: 0px 8px 40px 0px rgba(34, 69, 82, 0.15);
-          box-shadow: 0px 8px 40px 0px rgba(34, 69, 82, 0.15);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  height: 69px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 30px 190px 40px 189px;
-  width: 901px;
-}
-
-nav .brand {
-  color: #141414;
-  font-size: 24px;
-  font-family: "Do Hyeon", sans-serif;
-  margin: 23px 288px 24px 24px;
-}
-
-nav .nav-links a {
-  color: #bdbdbd;
-  font-family: "Kanit", sans-serif;
-  font-size: 14px;
-  margin: 23px 48px 24px 0px;
-}
-
-nav .nav-links a.active {
-  color: #ff5c4c;
 }
 
 .banner {
@@ -316,11 +316,11 @@ main table tr a:hover {
 
 footer {
   color: #bdbdbd;
-  text-align: center;
   font-family: "Kanit", sans-serif;
   font-size: 14px;
   letter-spacing: 2px;
   margin: 50px 0px;
+  text-align: center;
 }
 
 footer a {
