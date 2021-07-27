@@ -34,7 +34,7 @@ const all_pets = [
 function load_pets() {
 	let pets = ``;
 	for (let i = 0; i < all_pets.length; i++) {
-		pets += `<tr>`;
+		pets += `<tr data-pet-id="${all_pets[i].id}">`;
 		pets += `   <td class="pet-name">${all_pets[i].pet_name}</td>`;
 		pets += `   <td class="pet-type">${all_pets[i].pet_type}</td>`;
 		pets += `   <td class="actions">`;
@@ -83,8 +83,24 @@ function addPetAction(e) {
 	return false;
 }
 
+/**
+ *   DOCU: Show pet details when the user click details on a specific pet
+ *   Triggered by details button (has a class of details-pet-open-modal)
+ *   Last updated at: July 27, 2021
+ *   @author Ivan Christian Jay
+ */
+function showPetDetailsModal(e) {
+	e.preventDefault();
+	let pet_id = $(this).parent().parent().data("petId");
+	let selected_pet = all_pets.filter((pet) => pet.id == pet_id);
+	let pet_name = $(".details-pet-modal").find(".pet-name");
+	let pet_type = $(".details-pet-modal").find(".pet-type");
+	pet_name.text(`${selected_pet[0].pet_name}`);
+	pet_type.text(`${selected_pet[0].pet_type}`);
+}
+
 $(document).ready(function () {
 	load_pets();
-
 	$("#add-pet-form").submit(addPetAction);
+	$(document).on("click", ".details-pet-open-modal", showPetDetailsModal);
 });
