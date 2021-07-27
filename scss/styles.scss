@@ -53,6 +53,19 @@ nav {
 	}
 }
 
+/*Toast*/
+.toast {
+	.toast-header {
+		background: $light-pink;
+		color: #fff;
+	}
+
+	.added-pet-name {
+		font-weight: bold;
+	}
+	// background: @pink-color;
+}
+
 /*modal*/
 .modal {
 	.modal-dialog {

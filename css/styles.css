@@ -67,6 +67,16 @@ nav .nav-links a.active {
   color: #ff5c4c;
 }
 
+/*Toast*/
+.toast .toast-header {
+  background: #ff5c4c;
+  color: #fff;
+}
+
+.toast .added-pet-name {
+  font-weight: bold;
+}
+
 /*modal*/
 .modal .modal-dialog .modal-content .modal-header {
   border-bottom: none;

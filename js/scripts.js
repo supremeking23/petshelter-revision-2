@@ -26,6 +26,11 @@ const all_pets = [
 	},
 ];
 
+/**
+ *   DOCU: Load the pet list in to the DOM
+ *   Last updated at: July 27, 2021
+ *   @author Ivan Christian Jay
+ */
 function load_pets() {
 	let pets = ``;
 	for (let i = 0; i < all_pets.length; i++) {
@@ -38,18 +43,17 @@ function load_pets() {
         ><i class="fas fa-pen-square"></i> Edit</a
     >`;
 		pets += `</td>`;
-
 		pets += `</tr>`;
 	}
 	$("#pet-lists").html(pets);
 }
 
-$(document).ready(function () {
-	load_pets();
-
-	$("#add-pet-form").submit(addPetAction);
-});
-
+/**
+ *   DOCU: Add pet to the pet list array
+ *   Triggered by #add-pet-form on submit
+ *   Last updated at: July 27, 2021
+ *   @author Ivan Christian Jay
+ */
 function addPetAction(e) {
 	let pet_name = $("#pet-name");
 	let pet_type = $("#pet-type");
@@ -69,9 +73,18 @@ function addPetAction(e) {
 			pet_type: pet_type.val(),
 		});
 
+		$(".toast").toast("show");
+		$(".added-pet-name").html(pet_name.val());
+
+		load_pets();
 		pet_name.val("");
 		pet_type.val($("#pet-type option:first").val());
-		load_pets();
 	}
 	return false;
 }
+
+$(document).ready(function () {
+	load_pets();
+
+	$("#add-pet-form").submit(addPetAction);
+});
