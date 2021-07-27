@@ -8,9 +8,148 @@ $light-gray-secondary: #bdbdbd;
 	padding: 0;
 }
 
-body {
-	background: $light-gray;
+/*modal*/
+.modal {
+	.modal-dialog {
+		.modal-content {
+			.modal-header {
+				border-bottom: none;
+				.modal-title {
+					font-weight: bold;
+					font-family: "Kanit", sans-serif;
+				}
+			}
+			.modal-body {
+				.form-group {
+					align-items: center;
+					display: flex;
+					label {
+						color: $light-gray-secondary;
+						font-size: 14px;
+						width: 100px;
+					}
+					.form-control {
+						// width: 300px;
+						background: #f2f2f2;
+						border: none;
+						color: #333333;
+					}
+					select {
+						/* styling */
+						background-color: white;
+						border-radius: 4px;
+						display: inline-block;
+						font: inherit;
+						line-height: 1.5em;
+						padding: 0.5em 3.5em 0.5em 1em;
+						color: #333333;
+						font-size: 14px;
+
+						/* reset */
+
+						margin: 0;
+						-webkit-box-sizing: border-box;
+						-moz-box-sizing: border-box;
+						box-sizing: border-box;
+						-webkit-appearance: none;
+						-moz-appearance: none;
+					}
+
+					select.custom-select {
+						background-image: linear-gradient(45deg, transparent 50%, #c4c4c4 50%), linear-gradient(135deg, #c4c4c4 50%, transparent 50%);
+
+						background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 0.5em) 0.5em;
+						background-size: 5px 5px, 5px 5px, 1.5em 1.5em;
+						background-repeat: no-repeat;
+					}
+				}
+			}
+			.modal-footer {
+				border-top: none;
+			}
+		}
+	}
 }
+
+.btn-add-pet-to-shelter,
+.btn-adopt-pet,
+.btn-like-pet,
+.btn-update-pet {
+	background: $light-pink;
+	color: #fff;
+	font-size: 14px;
+	padding: 6px 7px 9px 0px;
+	margin-right: 17px;
+
+	&:hover {
+		color: #fff;
+	}
+
+	i {
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+}
+
+.btn-like-pet {
+	background: #f5c388;
+	color: #fff;
+}
+
+.details-pet-modal {
+	.pet-type {
+		margin-top: 10px !important;
+		margin-right: 23px;
+	}
+	.modal-footer {
+		background: #f2f2f2;
+		display: flex;
+		flex-direction: row;
+
+		p {
+			margin-top: 0px !important;
+			margin-left: 0px !important;
+			font-family: "Kanit", sans-serif;
+			font-size: 18px;
+			width: 100px !important;
+			height: 22px;
+			text-align: right;
+			margin-right: 23px;
+			color: $light-gray-secondary;
+		}
+
+		.button-group {
+			display: flex;
+		}
+	}
+}
+
+.btn-add-pet-process {
+	background: $light-pink;
+	color: #fff;
+	font-size: 14px;
+	margin-right: 17px;
+	padding: 5.72 0px 6.68px 0px;
+	&:hover {
+		color: #fff;
+	}
+
+	i {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
+
+body {
+	background: #f5f9fa;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+// body * {
+// 	outline: 1px dashed red;
+// }
 
 nav {
 	align-items: center;
@@ -21,6 +160,7 @@ nav {
 	height: 69px;
 	justify-content: space-between;
 	margin: 30px 190px 40px 189px;
+	width: 901px;
 
 	.brand {
 		color: #141414;
@@ -39,22 +179,107 @@ nav {
 				color: $light-pink;
 			}
 		}
+	}
+}
+.banner {
+	font-family: "Do Hyeon", sans-serif;
+	.banner-text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 
-		.btn-add-pet-to-shelter {
-			background: $light-pink;
-			color: #fff;
-			font-size: 14px;
-			padding: 6px 7px 9px 0px;
-			margin-right: 17px;
+		h1 {
+			font-size: 48px;
 
-			&:hover {
-				color: #fff;
+			color: #141414;
+			width: 264px;
+			.adopt {
+				color: $light-pink;
 			}
-
-			i {
-				margin-right: 10px;
-				margin-left: 10px;
+			.shop {
+				color: $light-gray-secondary;
 			}
 		}
+
+		p {
+			color: $light-gray-secondary;
+		}
+	}
+
+	.banner-image {
+		img {
+			width: 595.32px;
+		}
+	}
+}
+
+main {
+	width: 861px;
+	margin-top: 60px;
+	font-family: "Kanit", sans-serif;
+	h2 {
+		text-align: center;
+
+		font-size: 24px;
+		margin-bottom: 30px;
+	}
+
+	table {
+		width: 100%;
+		tr {
+			align-items: center;
+			box-shadow: 0px 8px 40px 0px rgba(34, 69, 82, 0.05);
+			background: #fff;
+			display: flex;
+			height: 69px;
+			margin-bottom: 5px;
+			justify-content: space-between;
+
+			td.pet-name {
+				margin-left: 24px;
+				width: 230px;
+			}
+
+			td.pet-type {
+				width: 100px;
+			}
+
+			td.actions {
+				margin-right: 24.5px;
+
+				display: flex;
+				justify-content: space-between;
+			}
+			a {
+				color: $light-gray-secondary;
+				font-size: 18px;
+				.fas,
+				.far {
+					margin-left: 34px;
+					margin-right: 14px;
+
+					.fa-pen-square {
+						border-radius: 50px;
+					}
+				}
+
+				&:hover {
+					color: $light-gray-secondary;
+				}
+			}
+		}
+	}
+}
+
+footer {
+	color: $light-gray-secondary;
+	text-align: center;
+
+	font-family: "Kanit", sans-serif;
+	font-size: 14px;
+	letter-spacing: 2px;
+	margin: 50px 0px;
+	a {
+		color: $light-pink;
 	}
 }

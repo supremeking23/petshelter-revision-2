@@ -7,8 +7,160 @@
   padding: 0;
 }
 
+/*modal*/
+.modal .modal-dialog .modal-content .modal-header {
+  border-bottom: none;
+}
+
+.modal .modal-dialog .modal-content .modal-header .modal-title {
+  font-weight: bold;
+  font-family: "Kanit", sans-serif;
+}
+
+.modal .modal-dialog .modal-content .modal-body .form-group {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal .modal-dialog .modal-content .modal-body .form-group label {
+  color: #bdbdbd;
+  font-size: 14px;
+  width: 100px;
+}
+
+.modal .modal-dialog .modal-content .modal-body .form-group .form-control {
+  background: #f2f2f2;
+  border: none;
+  color: #333333;
+}
+
+.modal .modal-dialog .modal-content .modal-body .form-group select {
+  /* styling */
+  background-color: white;
+  border-radius: 4px;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+  color: #333333;
+  font-size: 14px;
+  /* reset */
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.modal .modal-dialog .modal-content .modal-body .form-group select.custom-select {
+  background-image: linear-gradient(45deg, transparent 50%, #c4c4c4 50%), linear-gradient(135deg, #c4c4c4 50%, transparent 50%);
+  background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 0.5em) 0.5em;
+  background-size: 5px 5px, 5px 5px, 1.5em 1.5em;
+  background-repeat: no-repeat;
+}
+
+.modal .modal-dialog .modal-content .modal-footer {
+  border-top: none;
+}
+
+.btn-add-pet-to-shelter,
+.btn-adopt-pet,
+.btn-like-pet,
+.btn-update-pet {
+  background: #ff5c4c;
+  color: #fff;
+  font-size: 14px;
+  padding: 6px 7px 9px 0px;
+  margin-right: 17px;
+}
+
+.btn-add-pet-to-shelter:hover,
+.btn-adopt-pet:hover,
+.btn-like-pet:hover,
+.btn-update-pet:hover {
+  color: #fff;
+}
+
+.btn-add-pet-to-shelter i,
+.btn-adopt-pet i,
+.btn-like-pet i,
+.btn-update-pet i {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.btn-like-pet {
+  background: #f5c388;
+  color: #fff;
+}
+
+.details-pet-modal .pet-type {
+  margin-top: 10px !important;
+  margin-right: 23px;
+}
+
+.details-pet-modal .modal-footer {
+  background: #f2f2f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.details-pet-modal .modal-footer p {
+  margin-top: 0px !important;
+  margin-left: 0px !important;
+  font-family: "Kanit", sans-serif;
+  font-size: 18px;
+  width: 100px !important;
+  height: 22px;
+  text-align: right;
+  margin-right: 23px;
+  color: #bdbdbd;
+}
+
+.details-pet-modal .modal-footer .button-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btn-add-pet-process {
+  background: #ff5c4c;
+  color: #fff;
+  font-size: 14px;
+  margin-right: 17px;
+  padding: 5.72 0px 6.68px 0px;
+}
+
+.btn-add-pet-process:hover {
+  color: #fff;
+}
+
+.btn-add-pet-process i {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 body {
-  background: #e5e5e5;
+  background: #f5f9fa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 nav {
@@ -30,6 +182,7 @@ nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 30px 190px 40px 189px;
+  width: 901px;
 }
 
 nav .brand {
@@ -50,20 +203,127 @@ nav .nav-links a.active {
   color: #ff5c4c;
 }
 
-nav .nav-links .btn-add-pet-to-shelter {
-  background: #ff5c4c;
-  color: #fff;
+.banner {
+  font-family: "Do Hyeon", sans-serif;
+}
+
+.banner .banner-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.banner .banner-text h1 {
+  font-size: 48px;
+  color: #141414;
+  width: 264px;
+}
+
+.banner .banner-text h1 .adopt {
+  color: #ff5c4c;
+}
+
+.banner .banner-text h1 .shop {
+  color: #bdbdbd;
+}
+
+.banner .banner-text p {
+  color: #bdbdbd;
+}
+
+.banner .banner-image img {
+  width: 595.32px;
+}
+
+main {
+  width: 861px;
+  margin-top: 60px;
+  font-family: "Kanit", sans-serif;
+}
+
+main h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+main table {
+  width: 100%;
+}
+
+main table tr {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 8px 40px 0px rgba(34, 69, 82, 0.05);
+          box-shadow: 0px 8px 40px 0px rgba(34, 69, 82, 0.05);
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 69px;
+  margin-bottom: 5px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main table tr td.pet-name {
+  margin-left: 24px;
+  width: 230px;
+}
+
+main table tr td.pet-type {
+  width: 100px;
+}
+
+main table tr td.actions {
+  margin-right: 24.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main table tr a {
+  color: #bdbdbd;
+  font-size: 18px;
+}
+
+main table tr a .fas,
+main table tr a .far {
+  margin-left: 34px;
+  margin-right: 14px;
+}
+
+main table tr a .fas .fa-pen-square,
+main table tr a .far .fa-pen-square {
+  border-radius: 50px;
+}
+
+main table tr a:hover {
+  color: #bdbdbd;
+}
+
+footer {
+  color: #bdbdbd;
+  text-align: center;
+  font-family: "Kanit", sans-serif;
   font-size: 14px;
-  padding: 6px 7px 9px 0px;
-  margin-right: 17px;
+  letter-spacing: 2px;
+  margin: 50px 0px;
 }
 
-nav .nav-links .btn-add-pet-to-shelter:hover {
-  color: #fff;
-}
-
-nav .nav-links .btn-add-pet-to-shelter i {
-  margin-right: 10px;
-  margin-left: 10px;
+footer a {
+  color: #ff5c4c;
 }
 /*# sourceMappingURL=styles.css.map */
