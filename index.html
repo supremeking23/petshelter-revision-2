@@ -43,7 +43,13 @@
 		<script src="./js/scripts.js"></script>
 
 		<script>
-			$(document).ready(function () {});
+			$(document).ready(function () {
+				// $("body").on("click", ".btn-add", addPet); /* To add pet */
+				// .on("click", ".detailsPet-open-modal", showPetDetailsModal) /* To add pet */
+				// .on("click", ".editPet-open-modal", showEditPetDetailsModal) /* To add pet */
+				// .on("click", ".btn-update", editPet); /* To add pet */
+				// load_pets();
+			});
 		</script>
 	</head>
 	<body>
@@ -79,80 +85,7 @@
 
 		<main>
 			<h2>These pets are looking for a good home</h2>
-			<table>
-				<tr>
-					<td class="pet-name">Garfield</td>
-					<td class="pet-type">Cats</td>
-					<td class="actions">
-						<a href="#" role="button" class="details-pet-open-modal" data-toggle="modal" data-target=".details-pet-modal"
-							><i class="far fa-list-alt"></i> Details</a
-						>
-						<a href="#" role="button" data-toggle="modal" class="edit-pet-open-modal" data-target=".edit-pet-modal"
-							><i class="fas fa-pen-square"></i> Edit</a
-						>
-					</td>
-				</tr>
-				<tr>
-					<td class="pet-name">Doreamon</td>
-					<td class="pet-type">Cat</td>
-					<td class="actions">
-						<a href="#" role="button" class="details-pet-open-modal" data-toggle="modal" data-target=".details-pet-modal"
-							><i class="far fa-list-alt"></i> Details</a
-						>
-						<a href="#" role="button" data-toggle="modal" class="edit-pet-open-modal" data-target=".edit-pet-modal"
-							><i class="fas fa-pen-square"></i> Edit</a
-						>
-					</td>
-				</tr>
-				<tr>
-					<td class="pet-name">Snoopy</td>
-					<td class="pet-type">Dog</td>
-					<td class="actions">
-						<a href="#" role="button" class="details-pet-open-modal" data-toggle="modal" data-target=".details-pet-modal"
-							><i class="far fa-list-alt"></i> Details</a
-						>
-						<a href="#" role="button" data-toggle="modal" class="edit-pet-open-modal" data-target=".edit-pet-modal"
-							><i class="fas fa-pen-square"></i> Edit</a
-						>
-					</td>
-				</tr>
-				<tr>
-					<td class="pet-name">Dug</td>
-					<td class="pet-type">Dog</td>
-					<td class="actions">
-						<a href="#" role="button" class="details-pet-open-modal" data-toggle="modal" data-target=".details-pet-modal"
-							><i class="far fa-list-alt"></i> Details</a
-						>
-						<a href="#" role="button" data-toggle="modal" class="edit-pet-open-modal" data-target=".edit-pet-modal"
-							><i class="fas fa-pen-square"></i> Edit</a
-						>
-					</td>
-				</tr>
-				<tr>
-					<td class="pet-name">Daffy</td>
-					<td class="pet-type">Duck</td>
-					<td class="actions">
-						<a href="#" role="button" class="details-pet-open-modal" data-toggle="modal" data-target=".details-pet-modal"
-							><i class="far fa-list-alt"></i> Details</a
-						>
-						<a href="#" role="button" data-toggle="modal" class="edit-pet-open-modal" data-target=".edit-pet-modal"
-							><i class="fas fa-pen-square"></i> Edit</a
-						>
-					</td>
-				</tr>
-				<tr>
-					<td class="pet-name">Pen pen</td>
-					<td class="pet-type">Penguin</td>
-					<td class="actions">
-						<a href="#" role="button" class="details-pet-open-modal" data-toggle="modal" data-target=".details-pet-modal"
-							><i class="far fa-list-alt"></i> Details</a
-						>
-						<a href="#" role="button" data-toggle="modal" class="edit-pet-open-modal" data-target=".edit-pet-modal"
-							><i class="fas fa-pen-square"></i> Edit</a
-						>
-					</td>
-				</tr>
-			</table>
+			<table id="pet-lists"></table>
 		</main>
 
 		<footer>@2020 <a href="#">V88Studios</a>. All Rights Reserved</footer>
@@ -167,11 +100,11 @@
 							<span aria-hidden="true">&times;</span>
 						</button>
 					</div>
-					<form action="#" method="POST">
+					<form action="#" method="POST" id="add-pet-form">
 						<div class="modal-body">
 							<div class="form-group">
 								<label for="pet-name col-md-3">Pet Name</label>
-								<input type="text" class="form-control col-md-9" id="pet-name" name="pet-name" aria-describedby="emailHelp" />
+								<input type="text" class="form-control col-md-9" id="pet-name" name="pet-name" aria-describedby="pet-name" />
 							</div>
 
 							<div class="form-group">
@@ -186,7 +119,7 @@
 							</div>
 						</div>
 						<div class="modal-footer">
-							<button type="submit" class="btn btn-add-pet-process" data-dismiss="modal">
+							<button type="submit" class="btn btn-add-pet-process">
 								<i class="fas fa-save"></i>
 								Add Pet
 							</button>
@@ -242,7 +175,7 @@
 							<span aria-hidden="true">&times;</span>
 						</button>
 					</div>
-					<form>
+					<form action="#" method="POST">
 						<div class="modal-body">
 							<div class="form-group">
 								<div class="col-md-3">
@@ -259,7 +192,7 @@
 							</div>
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-update-pet" data-dismiss="modal">
+							<button type="submit" class="btn btn-update-pet" data-dismiss="modal">
 								<i class="fas fa-save"></i>
 								Save Changes
 							</button>
@@ -267,6 +200,18 @@
 					</form>
 				</div>
 			</div>
+		</div>
+
+		<!-- toast -->
+		<div class="toast" role="alert" data-delay="3000" aria-live="assertive" aria-atomic="true" style="position: absolute; top: 100px; right: 0">
+			<div class="toast-header">
+				<strong class="mr-auto">Succes</strong>
+				<small>1 second ago</small>
+				<button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="toast-body"><span class="added-pet-name"></span>, has been added to pet list.</div>
 		</div>
 	</body>
 </html>
