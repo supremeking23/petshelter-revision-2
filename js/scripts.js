@@ -1,4 +1,4 @@
-const all_pets = [
+let all_pets = [
 	{
 		id: 1,
 		pet_name: "Garfield",
@@ -99,8 +99,43 @@ function showPetDetailsModal(e) {
 	pet_type.text(`${selected_pet[0].pet_type}`);
 }
 
+/**
+ *   DOCU: Show pet details when the user click details on a specific pet
+ *   Triggered by details button (has a class of details-pet-open-modal)
+ *   Last updated at: July 27, 2021
+ *   @author Ivan Christian Jay
+ */
+function editPetDetailsModal(e) {
+	e.preventDefault();
+	let pet_id = $(this).parent().parent().data("petId");
+	let selected_pet = all_pets.filter((pet) => pet.id == pet_id);
+	let pet_name = $(".edit-pet-modal").find(".pet-name");
+	let pet_id_input = $(".edit-pet-modal").find(".pet-id");
+	pet_name.text(`${selected_pet[0].pet_name}`);
+	pet_id_input.val(selected_pet[0].id);
+	$(`.edit-pet-modal .pet-type option:contains("${$(this).parent().siblings()[1].innerHTML}")`).prop("selected", true);
+}
+
+/**
+ *   DOCU: Update pet to the pet list array
+ *   Triggered by #edit-pet-form on submit
+ *   Last updated at: July 27, 2021
+ *   @author Ivan Christian Jay
+ */
+function updatePetAction(e) {
+	// alert("upadte");
+	let pet_id_input_value = $(".pet-id").val();
+	let pet_to_update = all_pets.findIndex((pet) => pet.id === parseInt(pet_id_input_value));
+	let pet_type = $("#pet-type-edit").val();
+	all_pets[pet_to_update].pet_type = pet_type;
+	$(".edit-pet-modal").modal("hide");
+	load_pets();
+	return false;
+}
+
 $(document).ready(function () {
 	load_pets();
 	$("#add-pet-form").submit(addPetAction);
-	$(document).on("click", ".details-pet-open-modal", showPetDetailsModal);
+	$("#edit-pet-form").submit(updatePetAction);
+	$("body").on("click", ".details-pet-open-modal", showPetDetailsModal).on("click", ".edit-pet-open-modal", editPetDetailsModal);
 });

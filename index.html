@@ -175,7 +175,8 @@
 							<span aria-hidden="true">&times;</span>
 						</button>
 					</div>
-					<form action="#" method="POST">
+					<form action="#" method="POST" id="edit-pet-form">
+						<input type="hidden" name="pet-id" class="pet-id" />
 						<div class="modal-body">
 							<div class="form-group">
 								<div class="col-md-3">
@@ -192,7 +193,7 @@
 							</div>
 						</div>
 						<div class="modal-footer">
-							<button type="submit" class="btn btn-update-pet" data-dismiss="modal">
+							<button type="submit" class="btn btn-update-pet">
 								<i class="fas fa-save"></i>
 								Save Changes
 							</button>
