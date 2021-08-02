@@ -259,7 +259,9 @@ main {
 					display: flex;
 					justify-content: space-between;
 					margin-right: 24.5px;
-					a {
+					button {
+						background: transparent;
+						border:none;
 						color: $light-gray-secondary;
 						font-size: 18px;
 						i {
