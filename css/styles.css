@@ -51,8 +51,8 @@ nav {
 
 nav .brand {
   color: #141414;
-  font-size: 24px;
   font-family: "Do Hyeon", sans-serif;
+  font-size: 24px;
   margin: 23px 288px 24px 24px;
 }
 
@@ -83,8 +83,8 @@ nav .nav-links a.active {
 }
 
 .modal .modal-dialog .modal-content .modal-header .modal-title {
-  font-weight: bold;
   font-family: "Kanit", sans-serif;
+  font-weight: bold;
 }
 
 .modal .modal-dialog .modal-content .modal-body .form-group {
@@ -109,28 +109,27 @@ nav .nav-links a.active {
 }
 
 .modal .modal-dialog .modal-content .modal-body .form-group select {
-  /* styling */
+  -moz-appearance: none;
+  -moz-box-sizing: border-box;
+  -webkit-appearance: none;
+  -webkit-box-sizing: border-box;
   background-color: white;
   border-radius: 4px;
+  box-sizing: border-box;
+  color: #333333;
   display: inline-block;
+  font-size: 14px;
   font: inherit;
   line-height: 1.5em;
-  padding: 0.5em 3.5em 0.5em 1em;
-  color: #333333;
-  font-size: 14px;
-  /* reset */
   margin: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  padding: 0.5em 3.5em 0.5em 1em;
 }
 
 .modal .modal-dialog .modal-content .modal-body .form-group select.custom-select {
   background-image: linear-gradient(45deg, transparent 50%, #c4c4c4 50%), linear-gradient(135deg, #c4c4c4 50%, transparent 50%);
   background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 0.5em) 0.5em;
-  background-size: 5px 5px, 5px 5px, 1.5em 1.5em;
   background-repeat: no-repeat;
+  background-size: 5px 5px, 5px 5px, 1.5em 1.5em;
 }
 
 .modal .modal-dialog .modal-content .modal-footer {
@@ -144,8 +143,8 @@ nav .nav-links a.active {
   background: #ff5c4c;
   color: #fff;
   font-size: 14px;
-  padding: 6px 7px 9px 0px;
   margin-right: 17px;
+  padding: 6px 7px 9px 0px;
 }
 
 .btn-add-pet-to-shelter:hover,
@@ -159,8 +158,8 @@ nav .nav-links a.active {
 .btn-adopt-pet i,
 .btn-like-pet i,
 .btn-update-pet i {
-  margin-right: 10px;
   margin-left: 10px;
+  margin-right: 10px;
 }
 
 .btn-like-pet {
@@ -186,12 +185,12 @@ nav .nav-links a.active {
 
 .details-pet-modal .modal-footer p {
   color: #bdbdbd;
-  margin-top: 0px !important;
-  margin-left: 0px !important;
   font-family: "Kanit", sans-serif;
   font-size: 18px;
   height: 22px;
+  margin-left: 0px !important;
   margin-right: 23px;
+  margin-top: 0px !important;
   text-align: right;
   width: 100px !important;
 }
@@ -259,15 +258,15 @@ nav .nav-links a.active {
 }
 
 main {
-  width: 861px;
-  margin-top: 60px;
   font-family: "Kanit", sans-serif;
+  margin-top: 60px;
+  width: 861px;
 }
 
 main h2 {
-  text-align: center;
   font-size: 24px;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 main table {
@@ -278,17 +277,17 @@ main table tr {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: #fff;
   -webkit-box-shadow: 0px 8px 40px 0px rgba(34, 69, 82, 0.05);
           box-shadow: 0px 8px 40px 0px rgba(34, 69, 82, 0.05);
-  background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 69px;
-  margin-bottom: 5px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 5px;
 }
 
 main table tr td.pet-name {
@@ -301,32 +300,26 @@ main table tr td.pet-type {
 }
 
 main table tr td.actions {
-  margin-right: 24.5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-right: 24.5px;
 }
 
-main table tr a {
+main table tr td.actions a {
   color: #bdbdbd;
   font-size: 18px;
 }
 
-main table tr a .fas,
-main table tr a .far {
+main table tr td.actions a i.fas, main table tr td.actions a i.far {
   margin-left: 34px;
   margin-right: 14px;
 }
 
-main table tr a .fas .fa-pen-square,
-main table tr a .far .fa-pen-square {
-  border-radius: 50px;
-}
-
-main table tr a:hover {
+main table tr td.actions a:hover {
   color: #bdbdbd;
 }
 
