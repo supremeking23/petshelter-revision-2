@@ -38,9 +38,9 @@ function load_pets() {
 		pets += `   <td class="pet-name">${all_pets[i].pet_name}</td>`;
 		pets += `   <td class="pet-type">${all_pets[i].pet_type}</td>`;
 		pets += `   <td class="actions">`;
-		pets += `    <a href="#" role="button" class="details-pet-open-modal" data-toggle="modal" data-target=".details-pet-modal"><i class="far fa-list-alt"></i> Details</a>`;
-		pets += `    <a href="#" role="button" data-toggle="modal" class="edit-pet-open-modal" data-target=".edit-pet-modal"
-        ><i class="fas fa-pen-square"></i> Edit</a
+		pets += `    <button class="details-pet-open-modal" data-toggle="modal" data-target=".details-pet-modal"><i class="far fa-list-alt"></i> Details</button>`;
+		pets += `    <button data-toggle="modal" class="edit-pet-open-modal" data-target=".edit-pet-modal"
+        ><i class="fas fa-pen-square"></i> Edit</button
     >`;
 		pets += `</td>`;
 		pets += `</tr>`;
