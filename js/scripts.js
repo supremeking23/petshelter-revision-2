@@ -123,7 +123,6 @@ function editPetDetailsModal(e) {
  *   @author Ivan Christian Jay
  */
 function updatePetAction(e) {
-	// alert("upadte");
 	let pet_id_input_value = $(".pet-id").val();
 	let pet_to_update = all_pets.findIndex((pet) => pet.id === parseInt(pet_id_input_value));
 	let pet_type = $("#pet-type-edit").val();
@@ -135,7 +134,9 @@ function updatePetAction(e) {
 
 $(document).ready(function () {
 	load_pets();
-	$("#add-pet-form").submit(addPetAction);
-	$("#edit-pet-form").submit(updatePetAction);
-	$("body").on("click", ".details-pet-open-modal", showPetDetailsModal).on("click", ".edit-pet-open-modal", editPetDetailsModal);
+	$("#add_pet_form").submit(addPetAction);
+	$("#edit_pet_form").submit(updatePetAction);
+	$("body")
+			.on("click", ".details-pet-open-modal", showPetDetailsModal)
+			.on("click", ".edit-pet-open-modal", editPetDetailsModal);
 });
