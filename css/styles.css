@@ -56,14 +56,14 @@ nav .brand {
   margin: 23px 288px 24px 24px;
 }
 
-nav .nav-links a {
+nav .nav_links a {
   color: #bdbdbd;
   font-family: "Kanit", sans-serif;
   font-size: 14px;
   margin: 23px 48px 24px 0px;
 }
 
-nav .nav-links a.active {
+nav .nav_links a.active {
   color: #ff5c4c;
 }
 
@@ -73,7 +73,7 @@ nav .nav-links a.active {
   color: #fff;
 }
 
-.toast .added-pet-name {
+.toast .added_pet_name {
   font-weight: bold;
 }
 
@@ -136,10 +136,10 @@ nav .nav-links a.active {
   border-top: none;
 }
 
-.btn-add-pet-to-shelter,
-.btn-adopt-pet,
-.btn-like-pet,
-.btn-update-pet {
+.btn_add_pet_to_shelter,
+.btn_adopt_pet,
+.btn_like_pet,
+.btn_update_pet {
   background: #ff5c4c;
   color: #fff;
   font-size: 14px;
@@ -147,32 +147,32 @@ nav .nav-links a.active {
   padding: 6px 7px 9px 0px;
 }
 
-.btn-add-pet-to-shelter:hover,
-.btn-adopt-pet:hover,
-.btn-like-pet:hover,
-.btn-update-pet:hover {
+.btn_add_pet_to_shelter:hover,
+.btn_adopt_pet:hover,
+.btn_like_pet:hover,
+.btn_update_pet:hover {
   color: #fff;
 }
 
-.btn-add-pet-to-shelter i,
-.btn-adopt-pet i,
-.btn-like-pet i,
-.btn-update-pet i {
+.btn_add_pet_to_shelter i,
+.btn_adopt_pet i,
+.btn_like_pet i,
+.btn_update_pet i {
   margin-left: 10px;
   margin-right: 10px;
 }
 
-.btn-like-pet {
+.btn_like_pet {
   background: #f5c388;
   color: #fff;
 }
 
-.details-pet-modal .pet-type {
+.details_pet_modal .pet_type {
   margin-top: 10px !important;
   margin-right: 23px;
 }
 
-.details-pet-modal .modal-footer {
+.details_pet_modal .modal-footer {
   background: #f2f2f2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -183,7 +183,7 @@ nav .nav-links a.active {
           flex-direction: row;
 }
 
-.details-pet-modal .modal-footer p {
+.details_pet_modal .modal-footer p {
   color: #bdbdbd;
   font-family: "Kanit", sans-serif;
   font-size: 18px;
@@ -195,13 +195,13 @@ nav .nav-links a.active {
   width: 100px !important;
 }
 
-.details-pet-modal .modal-footer .button-group {
+.details_pet_modal .modal-footer .button_group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.btn-add-pet-process {
+.btn_add_pet_process {
   background: #ff5c4c;
   color: #fff;
   font-size: 14px;
@@ -209,11 +209,11 @@ nav .nav-links a.active {
   padding: 5.72 0px 6.68px 0px;
 }
 
-.btn-add-pet-process:hover {
+.btn_add_pet_process:hover {
   color: #fff;
 }
 
-.btn-add-pet-process i {
+.btn_add_pet_process i {
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -222,7 +222,7 @@ nav .nav-links a.active {
   font-family: "Do Hyeon", sans-serif;
 }
 
-.banner .banner-text {
+.banner .banner_text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -235,25 +235,25 @@ nav .nav-links a.active {
           justify-content: center;
 }
 
-.banner .banner-text h1 {
+.banner .banner_text h1 {
   font-size: 48px;
   color: #141414;
   width: 264px;
 }
 
-.banner .banner-text h1 .adopt {
+.banner .banner_text h1 .adopt {
   color: #ff5c4c;
 }
 
-.banner .banner-text h1 .shop {
+.banner .banner_text h1 .shop {
   color: #bdbdbd;
 }
 
-.banner .banner-text p {
+.banner .banner_text p {
   color: #bdbdbd;
 }
 
-.banner .banner-image img {
+.banner .banner_image img {
   width: 595.32px;
 }
 
@@ -290,12 +290,12 @@ main table tr {
   margin-bottom: 5px;
 }
 
-main table tr td.pet-name {
+main table tr td.pet_name {
   margin-left: 24px;
   width: 230px;
 }
 
-main table tr td.pet-type {
+main table tr td.pet_type {
   width: 100px;
 }
 
@@ -338,8 +338,7 @@ footer a {
   color: #ff5c4c;
 }
 
-/*for form error*/
-.form-shake {
+.form_shake {
   -webkit-animation: shake 0.5s;
           animation: shake 0.5s;
   -webkit-animation-iteration-count: 1;

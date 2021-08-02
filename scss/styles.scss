@@ -41,7 +41,7 @@ nav {
 		margin: 23px 288px 24px 24px;
 	}
 
-	.nav-links {
+	.nav_links {
 		a {
 			color: $light-gray-secondary;
 			font-family: "Kanit", sans-serif;
@@ -61,7 +61,7 @@ nav {
 		color: #fff;
 	}
 
-	.added-pet-name {
+	.added_pet_name {
 		font-weight: bold;
 	}
 }
@@ -127,10 +127,10 @@ nav {
 }
 
 // buttons
-.btn-add-pet-to-shelter,
-.btn-adopt-pet,
-.btn-like-pet,
-.btn-update-pet {
+.btn_add_pet_to_shelter,
+.btn_adopt_pet,
+.btn_like_pet,
+.btn_update_pet {
 	background: $light-pink;
 	color: #fff;
 	font-size: 14px;
@@ -147,13 +147,13 @@ nav {
 	}
 }
 
-.btn-like-pet {
+.btn_like_pet {
 	background: #f5c388;
 	color: #fff;
 }
 
-.details-pet-modal {
-	.pet-type {
+.details_pet_modal {
+	.pet_type {
 		margin-top: 10px !important;
 		margin-right: 23px;
 	}
@@ -161,7 +161,6 @@ nav {
 		background: #f2f2f2;
 		display: flex;
 		flex-direction: row;
-
 		p {
 			color: $light-gray-secondary;
 			font-family: "Kanit", sans-serif;
@@ -173,14 +172,13 @@ nav {
 			text-align: right;
 			width: 100px !important;
 		}
-
-		.button-group {
+		.button_group {
 			display: flex;
 		}
 	}
 }
 
-.btn-add-pet-process {
+.btn_add_pet_process {
 	background: $light-pink;
 	color: #fff;
 	font-size: 14px;
@@ -189,7 +187,6 @@ nav {
 	&:hover {
 		color: #fff;
 	}
-
 	i {
 		margin-left: 10px;
 		margin-right: 10px;
@@ -198,11 +195,10 @@ nav {
 
 .banner {
 	font-family: "Do Hyeon", sans-serif;
-	.banner-text {
+	.banner_text {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-
 		h1 {
 			font-size: 48px;
 			color: #141414;
@@ -220,7 +216,7 @@ nav {
 		}
 	}
 
-	.banner-image {
+	.banner_image {
 		img {
 			width: 595.32px;
 		}
@@ -248,11 +244,11 @@ main {
 			justify-content: space-between;
 			margin-bottom: 5px;
 			td {
-				&.pet-name {
+				&.pet_name {
 					margin-left: 24px;
 					width: 230px;
 				}
-				&.pet-type {
+				&.pet_type {
 					width: 100px;
 				}
 				&.actions {
@@ -292,8 +288,8 @@ footer {
 	}
 }
 
-/*for form error*/
-.form-shake {
+
+.form_shake {
 	animation: shake 0.5s;
 	animation-iteration-count: 1;
 }
