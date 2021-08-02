@@ -1,3 +1,13 @@
+$(document).ready(function () {
+	load_pets();
+	$("#add_pet_form").submit(addPetAction);
+	$("#edit_pet_form").submit(updatePetAction);
+	$("body")
+			.on("click", ".details_pet_open_modal", showPetDetailsModal)
+			.on("click", ".edit_pet_open_modal", editPetDetailsModal);
+});
+
+
 let all_pets = [
 	{
 		id: 1,
@@ -35,17 +45,17 @@ function load_pets() {
 	let pets = ``;
 	for (let i = 0; i < all_pets.length; i++) {
 		pets += `<tr data-pet-id="${all_pets[i].id}">`;
-		pets += `   <td class="pet-name">${all_pets[i].pet_name}</td>`;
-		pets += `   <td class="pet-type">${all_pets[i].pet_type}</td>`;
+		pets += `   <td class="pet_name">${all_pets[i].pet_name}</td>`;
+		pets += `   <td class="pet_type">${all_pets[i].pet_type}</td>`;
 		pets += `   <td class="actions">`;
-		pets += `    <button class="details-pet-open-modal" data-toggle="modal" data-target=".details-pet-modal"><i class="far fa-list-alt"></i> Details</button>`;
-		pets += `    <button data-toggle="modal" class="edit-pet-open-modal" data-target=".edit-pet-modal"
+		pets += `    <button class="details_pet_open_modal" data-toggle="modal" data-target=".details_pet_modal"><i class="far fa-list-alt"></i> Details</button>`;
+		pets += `    <button data-toggle="modal" class="edit_pet_open_modal" data-target=".edit_pet_modal"
         ><i class="fas fa-pen-square"></i> Edit</button
     >`;
 		pets += `</td>`;
 		pets += `</tr>`;
 	}
-	$("#pet-lists").html(pets);
+	$("#pet_lists").html(pets);
 }
 
 /**
@@ -55,17 +65,17 @@ function load_pets() {
  *   @author Ivan Christian Jay
  */
 function addPetAction(e) {
-	let pet_name = $("#pet-name");
-	let pet_type = $("#pet-type");
+	let pet_name = $("#pet_name");
+	let pet_type = $("#pet_type");
 	if (pet_name.val() == "") {
-		pet_name.addClass("form-shake");
+		pet_name.addClass("form_shake");
 		pet_name.css("border", "2px solid red");
 		setTimeout(function () {
-			pet_name.removeClass("form-shake");
+			pet_name.removeClass("form_shake");
 		}, 1000);
 	} else {
 		pet_name.css("border", "none");
-		$("#add-pet-to-shelter-modal").modal("hide");
+		$("#add_pet_to_shelter_modal").modal("hide");
 
 		all_pets.unshift({
 			id: all_pets.length + 1,
@@ -74,11 +84,11 @@ function addPetAction(e) {
 		});
 
 		$(".toast").toast("show");
-		$(".added-pet-name").html(pet_name.val());
+		$(".added_pet_name").html(pet_name.val());
 
 		load_pets();
 		pet_name.val("");
-		pet_type.val($("#pet-type option:first").val());
+		pet_type.val($("#pet_type option:first").val());
 	}
 	return false;
 }
@@ -93,8 +103,8 @@ function showPetDetailsModal(e) {
 	e.preventDefault();
 	let pet_id = $(this).parent().parent().data("petId");
 	let selected_pet = all_pets.filter((pet) => pet.id == pet_id);
-	let pet_name = $(".details-pet-modal").find(".pet-name");
-	let pet_type = $(".details-pet-modal").find(".pet-type");
+	let pet_name = $(".details_pet_modal").find(".pet_name");
+	let pet_type = $(".details_pet_modal").find(".pet_type");
 	pet_name.text(`${selected_pet[0].pet_name}`);
 	pet_type.text(`${selected_pet[0].pet_type}`);
 }
@@ -109,11 +119,11 @@ function editPetDetailsModal(e) {
 	e.preventDefault();
 	let pet_id = $(this).parent().parent().data("petId");
 	let selected_pet = all_pets.filter((pet) => pet.id == pet_id);
-	let pet_name = $(".edit-pet-modal").find(".pet-name");
-	let pet_id_input = $(".edit-pet-modal").find(".pet-id");
+	let pet_name = $(".edit_pet_modal").find(".pet_name");
+	let pet_id_input = $(".edit_pet_modal").find(".pet_id");
 	pet_name.text(`${selected_pet[0].pet_name}`);
 	pet_id_input.val(selected_pet[0].id);
-	$(`.edit-pet-modal .pet-type option:contains("${$(this).parent().siblings()[1].innerHTML}")`).prop("selected", true);
+	$(`.edit_pet_modal .pet_type option:contains("${$(this).parent().siblings()[1].innerHTML}")`).prop("selected", true);
 }
 
 /**
@@ -123,20 +133,12 @@ function editPetDetailsModal(e) {
  *   @author Ivan Christian Jay
  */
 function updatePetAction(e) {
-	let pet_id_input_value = $(".pet-id").val();
+	let pet_id_input_value = $(".pet_id").val();
 	let pet_to_update = all_pets.findIndex((pet) => pet.id === parseInt(pet_id_input_value));
-	let pet_type = $("#pet-type-edit").val();
+	let pet_type = $("#pet_type_edit").val();
 	all_pets[pet_to_update].pet_type = pet_type;
-	$(".edit-pet-modal").modal("hide");
+	$(".edit_pet_modal").modal("hide");
 	load_pets();
 	return false;
 }
 
-$(document).ready(function () {
-	load_pets();
-	$("#add_pet_form").submit(addPetAction);
-	$("#edit_pet_form").submit(updatePetAction);
-	$("body")
-			.on("click", ".details-pet-open-modal", showPetDetailsModal)
-			.on("click", ".edit-pet-open-modal", editPetDetailsModal);
-});

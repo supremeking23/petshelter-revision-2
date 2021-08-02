@@ -47,11 +47,11 @@
 	<body>
 		<nav>
 			<a class="brand" href="#">PETSHELTER</a>
-			<div class="nav-links">
+			<div class="nav_links">
 				<a href="#" class="active">Home</a>
 				<a href="#">Services</a>
 				<a href="#">Event</a>
-				<button type="button" class="btn btn-add-pet-to-shelter" data-toggle="modal" data-target="#add-pet-to-shelter-modal">
+				<button type="button" class="btn btn_add_pet_to_shelter" data-toggle="modal" data-target="#add_pet_to_shelter_modal">
 					<i class="fa fa-plus-circle" aria-hidden="true"></i>Add pet to shelter
 				</button>
 			</div>
@@ -61,14 +61,14 @@
 		<div class="banner">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4 banner-text">
+					<div class="col-md-4 banner_text">
 						<h1>Let's <span class="adopt"> Adopt </span>Don't <span class="shop">Shop</span></h1>
 						<p>
 							Lorem ipsum dolor sit amet, consectetur <br />
 							adipiscing elit. Neque id lorem nisi.
 						</p>
 					</div>
-					<div class="col-md-8 banner-image">
+					<div class="col-md-8 banner_image">
 						<img src="./assets/Group 5.png" alt="cat-dog" />
 					</div>
 				</div>
@@ -77,13 +77,13 @@
 
 		<main>
 			<h2>These pets are looking for a good home</h2>
-			<table id="pet-lists"></table>
+			<table id="pet_lists"></table>
 		</main>
 
 		<footer>@2020 <a href="#">V88Studios</a>. All Rights Reserved</footer>
 
 		<!-- modals -->
-		<div class="modal fade" id="add-pet-to-shelter-modal" tabindex="-1" aria-labelledby="add-pet-to-shelter-modal" aria-hidden="true">
+		<div class="modal fade" id="add_pet_to_shelter_modal" tabindex="-1" aria-labelledby="add_pet_to_shelter_modal" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -95,13 +95,13 @@
 					<form action="#" method="POST" id="add_pet_form">
 						<div class="modal-body">
 							<div class="form-group">
-								<label for="pet-name col-md-3">Pet Name</label>
-								<input type="text" class="form-control col-md-9" id="pet-name" name="pet-name" aria-describedby="pet-name" />
+								<label for="pet_name col-md-3">Pet Name</label>
+								<input type="text" class="form-control col-md-9" id="pet_name" name="pet_name" aria-describedby="pet_name" />
 							</div>
 
 							<div class="form-group">
-								<label for="pet-name col-md-3">Pet Type</label>
-								<select class="form-control custom-select col-md-9" id="pet-type" name="pet-type">
+								<label for="pet_name col-md-3">Pet Type</label>
+								<select class="form-control custom-select col-md-9" id="pet_type" name="pet_type">
 									<option>Pig</option>
 									<option>Dog</option>
 									<option>Cat</option>
@@ -110,7 +110,7 @@
 							</div>
 						</div>
 						<div class="modal-footer">
-							<button type="submit" class="btn btn-add-pet-process">
+							<button type="submit" class="btn btn_add_pet_process">
 								<i class="fas fa-save"></i>
 								Add Pet
 							</button>
@@ -120,35 +120,35 @@
 			</div>
 		</div>
 
-		<div class="modal fade details-pet-modal" tabindex="-1" aria-labelledby="details-pet-modal" aria-hidden="true">
+		<div class="modal fade details_pet_modal" tabindex="-1" aria-labelledby="details_pet_modal" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title">Details About: <span class="pet-name">Garfield</span></h5>
+						<h5 class="modal-title">Details About: <span class="pet_name">Garfield</span></h5>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
 					</div>
 					<div class="modal-body">
 						<div class="form-group">
-							<label for="pet-type" class="col-md-3">Pet Type</label>
-							<p class="pet-type col-md-9">Cat</p>
+							<label for="pet_type" class="col-md-3">Pet Type</label>
+							<p class="pet_type col-md-9">Cat</p>
 						</div>
 					</div>
 					<div class="modal-footer">
 						<p><span class="likes">0</span> Likes</p>
 
-						<div class="button-group">
+						<div class="button_group">
 							<form action="#" method="POST">
-								<button type="submit" class="btn btn-like-pet" data-dismiss="modal">
+								<button type="submit" class="btn btn_like_pet" data-dismiss="modal">
 									<i class="fas fa-heart"></i>
-									Like <span class="pet-name">Garfield</span>
+									Like <span class="pet_name">Garfield</span>
 								</button>
 							</form>
 							<form action="" method="POST">
-								<button type="submit" class="btn btn-adopt-pet" data-dismiss="modal">
+								<button type="submit" class="btn btn_adopt_pet" data-dismiss="modal">
 									<i class="fa fa-home" aria-hidden="true"></i>
-									Adopt <span class="pet-name">Garfield</span>
+									Adopt <span class="pet_name">Garfield</span>
 								</button>
 							</form>
 						</div>
@@ -157,24 +157,24 @@
 			</div>
 		</div>
 
-		<div class="modal fade edit-pet-modal" tabindex="-1" aria-labelledby="edit-pet-modal" aria-hidden="true">
+		<div class="modal fade edit_pet_modal" tabindex="-1" aria-labelledby="edit_pet_modal" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title">Edit Details: <span class="pet-name">Garfield</span></h5>
+						<h5 class="modal-title">Edit Details: <span class="pet_name">Garfield</span></h5>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
 					</div>
 					<form action="#" method="POST" id="edit_pet_form">
-						<input type="hidden" name="pet-id" class="pet-id" />
+						<input type="hidden" name="pet_id" class="pet_id" />
 						<div class="modal-body">
 							<div class="form-group">
 								<div class="col-md-3">
-									<label for="pet-name">Pet Type</label>
+									<label for="pet_name">Pet Type</label>
 								</div>
 								<div class="col-md-9">
-									<select class="form-control custom-select pet-type" id="pet-type-edit" name="pet-type">
+									<select class="form-control custom-select pet_type" id="pet_type_edit" name="pet_type">
 										<option>Pig</option>
 										<option>Dog</option>
 										<option>Cat</option>
@@ -184,7 +184,7 @@
 							</div>
 						</div>
 						<div class="modal-footer">
-							<button type="submit" class="btn btn-update-pet">
+							<button type="submit" class="btn btn_update_pet">
 								<i class="fas fa-save"></i>
 								Save Changes
 							</button>
@@ -203,7 +203,7 @@
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
-			<div class="toast-body"><span class="added-pet-name"></span>, has been added to pet list.</div>
+			<div class="toast-body"><span class="added_pet_name"></span>, has been added to pet list.</div>
 		</div>
 	</body>
 </html>
