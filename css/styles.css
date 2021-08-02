@@ -309,17 +309,19 @@ main table tr td.actions {
   margin-right: 24.5px;
 }
 
-main table tr td.actions a {
+main table tr td.actions button {
+  background: transparent;
+  border: none;
   color: #bdbdbd;
   font-size: 18px;
 }
 
-main table tr td.actions a i.fas, main table tr td.actions a i.far {
+main table tr td.actions button i.fas, main table tr td.actions button i.far {
   margin-left: 34px;
   margin-right: 14px;
 }
 
-main table tr td.actions a:hover {
+main table tr td.actions button:hover {
   color: #bdbdbd;
 }
 
