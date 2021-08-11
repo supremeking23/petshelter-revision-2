@@ -5,17 +5,8 @@ $(document).ready(function () {
 			.on("click", ".edit_pet_open_modal", editPetDetailsModal)
 			.on("submit","#add_pet_form", addPetAction)
 			.on("submit","#edit_pet_form", updatePetAction)
-			.on("input","#add_pet_form #pet_name", checkInput);
-			//clearAddPetForm
-			$('#add_pet_to_shelter_modal').on('hidden.bs.modal', function () {
-				loadPets();
-				let pet_name = $(this).find("#pet_name");
-				
-				$(this).find("#pet_type").val($("#pet_type option:first").val());
-				$(".toast").toast("show");
-				$(".added_pet_name").html(pet_name.val());
-				pet_name.val("");
-			});
+			.on("input","#add_pet_form #pet_name", checkInput)
+			.on('hidden.bs.modal',"#add_pet_to_shelter_modal",clearAddPetForm);
 
 			
 });
@@ -47,6 +38,24 @@ let all_pets = [
 		pet_type: "Penguin",
 	},
 ];
+
+/**
+*   DOCU: This function is used to clear form field in the add_pet_to_shelter_modal and will reload the loadPets function <br />
+* 	Trigger by .on('hidden.bs.modal',"#add_pet_to_shelter_modal",clearAddPetForm);
+*   Last updated at: August 11, 2021
+*   @author Ivan Christian Jay
+*/
+function clearAddPetForm(){
+	loadPets();
+
+	let add_pet_to_shelter_modal =  $(this)
+	let pet_name =add_pet_to_shelter_modal.find("#pet_name");
+	
+	add_pet_to_shelter_modal.find("#pet_type").val($("#pet_type option:first").val());
+	$(".toast").toast("show");
+	$(".added_pet_name").html(pet_name.val());
+	pet_name.val("");
+}
 
 /**
 *   DOCU: This function is used to check whether the input type in add_pet_form has been populated again <br />
