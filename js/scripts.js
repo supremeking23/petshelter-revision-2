@@ -53,7 +53,7 @@ function checkInput(){
 
 /**
  *   DOCU: Load the pet list in to the DOM <br />
- *   Last updated at: July 27, 2021 
+ *   Last updated at: August 11, 2021
  *   @author Ivan Christian Jay
  */
 function loadPets() {
@@ -71,13 +71,14 @@ function loadPets() {
 		pets += `</td>`;
 		pets += `</tr>`;
 	}
+
 	$("#pet_lists").html(pets);
 }
 
 /**
 *   DOCU: Add pet to the pet list array <br />
 *   Triggered by .on("submit","#add_pet_form",addPetAction) <br  />
-*   Last updated at: July 27, 2021
+*   Last updated at: August 11, 2021
 *   @author Ivan Christian Jay
 */
 function addPetAction() {
@@ -100,7 +101,6 @@ function addPetAction() {
 
 		$(".toast").toast("show"); //change this
 		$(".added_pet_name").html(pet_name.val());
-
 		loadPets();
 		pet_name.val("");
 		pet_type.val($("#pet_type option:first").val()); //hidden bs.modal
@@ -112,14 +112,15 @@ function addPetAction() {
 /**
  *   DOCU: Show pet details when the user click details on a specific pet <br />
  *   Triggered by .on("click", ".details_pet_open_modal", showPetDetailsModal) <br />
- *   Last updated at: July 27, 2021
+ *   Last updated at: August 11, 2021
  *   @author Ivan Christian Jay
  */
 function showPetDetailsModal() {	
-	let selected_pet = all_pets.filter((pet) => pet.id == $(this).parent().parent().data("petId"));
-	//put in the variable
-	$(".details_pet_modal").find(".pet_name").text(`${selected_pet[0].pet_name}`);
-	$(".details_pet_modal").find(".pet_type").text(`${selected_pet[0].pet_type}`);
+	let selected_pet = all_pets.filter((pet) => pet.id == $(this).closest("tr").data("petId"));
+	let details_pet_modal = $(".details_pet_modal");
+	
+	details_pet_modal.find(".pet_name").text(`${selected_pet[0].pet_name}`);
+	details_pet_modal.find(".pet_type").text(`${selected_pet[0].pet_type}`);
 	
 }
 
