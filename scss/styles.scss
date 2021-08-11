@@ -38,22 +38,31 @@ nav {
 
 	.brand {
 		color: #141414;
-		font: 24px/auto $dohyeon_font;
+		font: 24px $dohyeon_font;
 		margin: 23px 288px 24px 24px;
 	}
 
 	.nav_links {
+		align-items: center;
+		display: flex;
+		list-style-type:none;
+		margin: 0px 24px 0px 0px;
 		
-		a {
-			color: $light-gray-secondary;
-			font: 14px/auto $kanit_font;
-			margin: 23px 48px 24px 0px;
-			
-			&.active {
-				color: $light-pink;
+		li {
+			a {
+				color: $light-gray-secondary;
+				font-family: "Kanit", sans-serif;
+				font-size: 14px;
+				margin: 23px 48px 24px 0px;
+				&.active {
+					color: $light-pink;
+				}
+			}
+
+			button {
+				margin: 1px 0px 0px 0px;
 			}
 		}
-
 	}
 }
 

@@ -51,18 +51,34 @@ nav {
 
 nav .brand {
   color: #141414;
-  font: 24px/18px "Do Hyeon", sans-serif;
+  font: 24px "Do Hyeon", sans-serif;
   margin: 23px 288px 24px 24px;
 }
 
-nav .nav_links a {
+nav .nav_links {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  margin: 0px 24px 0px 0px;
+}
+
+nav .nav_links li a {
   color: #bdbdbd;
-  font: 14px/18px "Kanit", sans-serif;
+  font-family: "Kanit", sans-serif;
+  font-size: 14px;
   margin: 23px 48px 24px 0px;
 }
 
-nav .nav_links a.active {
+nav .nav_links li a.active {
   color: #ff5c4c;
+}
+
+nav .nav_links li button {
+  margin: 1px 0px 0px 0px;
 }
 
 /*Toast*/
