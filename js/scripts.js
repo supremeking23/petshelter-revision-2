@@ -72,8 +72,7 @@ function addPetAction(e) {
 		setTimeout(function () {
 			pet_name.removeClass("form_shake");
 		}, 1000);
-	} 
-	else {
+	} else {
 		pet_name.css("border", "none");
 		$("#add_pet_to_shelter_modal").modal("hide");
 
@@ -124,8 +123,8 @@ function editPetDetailsModal(e) {
 	pet_name.text(`${selected_pet[0].pet_name}`);
 	pet_id_input.val(selected_pet[0].id);
 	$(`.edit_pet_modal`)
-					.find(`.pet_type option:contains("${$(this).parent().siblings()[1].innerHTML}")`)
-					.prop("selected", true);
+						.find(`.pet_type option:contains("${$(this).parent().siblings()[1].innerHTML}")`)
+						.prop("selected", true);
 }
 
 /**
