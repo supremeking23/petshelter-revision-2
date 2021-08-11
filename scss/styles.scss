@@ -184,9 +184,11 @@ nav {
 	font-size: 14px;
 	margin-right: 17px;
 	padding: 5.72 0px 6.68px 0px;
+	
 	&:hover {
 		color: #fff;
 	}
+	
 	i {
 		margin-left: 10px;
 		margin-right: 10px;
@@ -195,32 +197,32 @@ nav {
 
 .banner {
 	font-family: "Do Hyeon", sans-serif;
-	.banner_text {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		h1 {
-			font-size: 48px;
-			color: #141414;
-			width: 264px;
-			.adopt {
-				color: $light-pink;
-			}
-			.shop {
-				color: $light-gray-secondary;
-			}
+	position: relative;
+	width: 861px;
+	
+	h1 {
+		color: #141414;
+		font-size: 48px;
+		width: 264px;
+		.adopt {
+			color: $light-pink;
 		}
-
-		p {
+		.shop {
 			color: $light-gray-secondary;
 		}
 	}
 
-	.banner_image {
-		img {
-			width: 595.32px;
-		}
+	p {
+		color: $light-gray-secondary;
 	}
+	
+	img {
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		width: 595.32px;
+	}
+	
 }
 
 main {

@@ -220,40 +220,32 @@ nav .nav_links a.active {
 
 .banner {
   font-family: "Do Hyeon", sans-serif;
+  position: relative;
+  width: 861px;
 }
 
-.banner .banner_text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.banner .banner_text h1 {
-  font-size: 48px;
+.banner h1 {
   color: #141414;
+  font-size: 48px;
   width: 264px;
 }
 
-.banner .banner_text h1 .adopt {
+.banner h1 .adopt {
   color: #ff5c4c;
 }
 
-.banner .banner_text h1 .shop {
+.banner h1 .shop {
   color: #bdbdbd;
 }
 
-.banner .banner_text p {
+.banner p {
   color: #bdbdbd;
 }
 
-.banner .banner_image img {
+.banner img {
+  position: absolute;
+  right: 0px;
+  top: 0px;
   width: 595.32px;
 }
 
