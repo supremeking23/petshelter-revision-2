@@ -239,11 +239,11 @@ nav .nav_links li button {
   width: 264px;
 }
 
-.banner h1 .adopt {
+.banner h1 #adopt {
   color: #ff5c4c;
 }
 
-.banner h1 .shop {
+.banner h1 #shop {
   color: #bdbdbd;
 }
 
