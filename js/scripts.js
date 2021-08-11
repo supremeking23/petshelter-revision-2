@@ -66,16 +66,15 @@ function loadPets() {
 function addPetAction() {
 	let pet_name = $("#pet_name");
 	let pet_type = $("#pet_type");
+	
 	if (pet_name.val() == "") {
 		pet_name.addClass("form_shake");
-		pet_name.css("border", "2px solid red");
-		setTimeout(function () {
-			pet_name.removeClass("form_shake");
-		}, 1000);
-	} else {
-		pet_name.css("border", "none");
+	
+	} 
+	else {
 		$("#add_pet_to_shelter_modal").modal("hide");
-
+		pet_name.removeClass("form_shake");
+		
 		all_pets.unshift({
 			id: all_pets.length + 1,
 			pet_name: pet_name.val(),
@@ -89,13 +88,14 @@ function addPetAction() {
 		pet_name.val("");
 		pet_type.val($("#pet_type option:first").val());
 	}
+
 	return false;
 }
 
 /**
  *   DOCU: Show pet details when the user click details on a specific pet <br />
  *   Triggered by .on("click", ".details_pet_open_modal", showPetDetailsModal) <br />
- *   Last updated at: July 27, 2021 <br />
+ *   Last updated at: July 27, 2021
  *   @author Ivan Christian Jay
  */
 function showPetDetailsModal() {

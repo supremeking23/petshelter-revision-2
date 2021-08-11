@@ -292,6 +292,7 @@ footer {
 .form_shake {
 	animation: shake 0.5s;
 	animation-iteration-count: 1;
+	border: 2px solid red !important;
 }
 @keyframes shake {
 	0% {

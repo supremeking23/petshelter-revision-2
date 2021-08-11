@@ -343,6 +343,7 @@ footer a {
           animation: shake 0.5s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
+  border: 2px solid red !important;
 }
 
 @-webkit-keyframes shake {
