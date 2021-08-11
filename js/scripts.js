@@ -6,6 +6,18 @@ $(document).ready(function () {
 			.on("submit","#add_pet_form", addPetAction)
 			.on("submit","#edit_pet_form", updatePetAction)
 			.on("input","#add_pet_form #pet_name", checkInput);
+			//clearAddPetForm
+			$('#add_pet_to_shelter_modal').on('hidden.bs.modal', function () {
+				loadPets();
+				let pet_name = $(this).find("#pet_name");
+				
+				$(this).find("#pet_type").val($("#pet_type option:first").val());
+				$(".toast").toast("show");
+				$(".added_pet_name").html(pet_name.val());
+				pet_name.val("");
+			});
+
+			
 });
 
 let all_pets = [
@@ -99,11 +111,6 @@ function addPetAction() {
 			pet_type: pet_type.val(),
 		});
 
-		$(".toast").toast("show"); //change this
-		$(".added_pet_name").html(pet_name.val());
-		loadPets();
-		pet_name.val("");
-		pet_type.val($("#pet_type option:first").val()); //hidden bs.modal
 	}
 
 	return false;
