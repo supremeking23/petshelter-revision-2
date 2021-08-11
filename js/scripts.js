@@ -3,9 +3,9 @@ $(document).ready(function () {
 	$("body")
 			.on("click", ".details_pet_open_modal", showPetDetailsModal)
 			.on("click", ".edit_pet_open_modal", editPetDetailsModal)
-			.on("submit","#add_pet_form",addPetAction)
-			.on("submit","#edit_pet_form",updatePetAction)
-			.on("input","#add_pet_form #pet_name",checkInput);
+			.on("submit","#add_pet_form", addPetAction)
+			.on("submit","#edit_pet_form", updatePetAction)
+			.on("input","#add_pet_form #pet_name", checkInput);
 });
 
 let all_pets = [
@@ -37,14 +37,17 @@ let all_pets = [
 ];
 
 /**
- *   DOCU: This function is used to check whether the input type in add_pet_form has been populated again <br />
- * 	 This if it is it remove the for shake class <br />
- *   Last updated at: August 11, 2021
- *   @author Ivan Christian Jay
- */
+*   DOCU: This function is used to check whether the input type in add_pet_form has been populated again <br />
+* 	 This if it is it remove the for shake class <br />
+* 	 Trigger by .on("input","#add_pet_form #pet_name", checkInput);
+*   Last updated at: August 11, 2021
+*   @author Ivan Christian Jay
+*/
 function checkInput(){
-	if($(this).val().length > 0){
-		$(this).removeClass("form_shake");
+	let pet_input = $(this);
+	
+	if(pet_input.val().length > 0){
+		pet_input.removeClass("form_shake");
 	}
 }
 
@@ -55,10 +58,11 @@ function checkInput(){
  */
 function loadPets() {
 	let pets = ``;
-	for (let i = 0; i < all_pets.length; i++) {
-		pets += `<tr data-pet-id="${all_pets[i].id}">`;
-		pets += `   <td class="pet_name">${all_pets[i].pet_name}</td>`;
-		pets += `   <td class="pet_type">${all_pets[i].pet_type}</td>`;
+	
+	for (let index = 0; index < all_pets.length; index++) {
+		pets += `<tr data-pet-id="${all_pets[index].id}">`;
+		pets += `   <td class="pet_name">${all_pets[index].pet_name}</td>`;
+		pets += `   <td class="pet_type">${all_pets[index].pet_type}</td>`;
 		pets += `   <td class="actions">`;
 		pets += `    <button class="details_pet_open_modal" data-toggle="modal" data-target=".details_pet_modal"><i class="far fa-list-alt"></i> Details</button>`;
 		pets += `    <button data-toggle="modal" class="edit_pet_open_modal" data-target=".edit_pet_modal"
@@ -71,11 +75,11 @@ function loadPets() {
 }
 
 /**
- *   DOCU: Add pet to the pet list array <br />
- *   Triggered by .on("submit","#add_pet_form",addPetAction) <br  />
- *   Last updated at: July 27, 2021
- *   @author Ivan Christian Jay
- */
+*   DOCU: Add pet to the pet list array <br />
+*   Triggered by .on("submit","#add_pet_form",addPetAction) <br  />
+*   Last updated at: July 27, 2021
+*   @author Ivan Christian Jay
+*/
 function addPetAction() {
 	let pet_name = $("#pet_name");
 	let pet_type = $("#pet_type");
@@ -94,12 +98,12 @@ function addPetAction() {
 			pet_type: pet_type.val(),
 		});
 
-		$(".toast").toast("show");
+		$(".toast").toast("show"); //change this
 		$(".added_pet_name").html(pet_name.val());
 
 		loadPets();
 		pet_name.val("");
-		pet_type.val($("#pet_type option:first").val());
+		pet_type.val($("#pet_type option:first").val()); //hidden bs.modal
 	}
 
 	return false;
@@ -111,22 +115,24 @@ function addPetAction() {
  *   Last updated at: July 27, 2021
  *   @author Ivan Christian Jay
  */
-function showPetDetailsModal() {
+function showPetDetailsModal() {	
 	let selected_pet = all_pets.filter((pet) => pet.id == $(this).parent().parent().data("petId"));
+	//put in the variable
 	$(".details_pet_modal").find(".pet_name").text(`${selected_pet[0].pet_name}`);
 	$(".details_pet_modal").find(".pet_type").text(`${selected_pet[0].pet_type}`);
 	
 }
 
 /**
- *   DOCU: Show pet details when the user click details on a specific pet <br />
- *   Triggered by details button (has a class of details-pet-open-modal) <br />
- *   Last updated at: July 27, 2021 
- *   @author Ivan Christian Jay
- */
+*   DOCU: Show pet details when the user click details on a specific pet <br />
+*   Triggered by details button (has a class of details-pet-open-modal) <br />
+*   Last updated at: July 27, 2021 
+*   @author Ivan Christian Jay
+*/
 function editPetDetailsModal(e) {
 	e.preventDefault();
-	let selected_pet = all_pets.filter((pet) => pet.id == $(this).parent().parent().data("petId"));
+	let selected_pet = all_pets.filter((pet) => pet.id == $(this).parent().parent().data("petId")); // change . closest
+	
 	$(".edit_pet_modal").find(".pet_id").val(selected_pet[0].id);
 	$(".edit_pet_modal").find(".pet_name").text(`${selected_pet[0].pet_name}`);
 	$(`.edit_pet_modal`)
