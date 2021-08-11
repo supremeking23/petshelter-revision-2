@@ -91,19 +91,23 @@ nav {
 				}
 			}
 			.modal-body {
-				.form-group {
-					align-items: center;
-					display: flex;
+
 					label {
 						color: $light-gray-secondary;
-						font-size: 14px;
+						font: 14px;
 						width: 100px;
+						margin: 0px 0px 20px 0px
 					}
 					.form-control {
 						background: #f2f2f2;
 						border: none;
 						color: $black;
+						width: 345px;
+						display: inline-block;
+						margin: 0px 0px 11px 0px
+						
 					}
+
 					select {
 						-moz-appearance: none;
 						-moz-box-sizing: border-box;
@@ -130,7 +134,7 @@ nav {
 						}
 					}
 					
-				}
+				
 			}
 			.modal-footer {
 				border-top: none;
@@ -167,8 +171,8 @@ nav {
 
 .details_pet_modal {
 	.pet_type {
-		margin-top: 10px !important;
-		margin-right: 23px;
+		display: inline-block;
+		margin: 10px 23px 0px 0px;
 	}
 	.modal-footer {
 		background: #f2f2f2;

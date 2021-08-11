@@ -101,28 +101,23 @@ nav .nav_links li button {
   font-weight: bold;
 }
 
-.modal .modal-dialog .modal-content .modal-body .form-group {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.modal .modal-dialog .modal-content .modal-body .form-group label {
+.modal .modal-dialog .modal-content .modal-body label {
   color: #bdbdbd;
-  font-size: 14px;
+  font: 14px;
   width: 100px;
+  margin: 0px 0px 20px 0px;
 }
 
-.modal .modal-dialog .modal-content .modal-body .form-group .form-control {
+.modal .modal-dialog .modal-content .modal-body .form-control {
   background: #f2f2f2;
   border: none;
   color: #333333;
+  width: 345px;
+  display: inline-block;
+  margin: 0px 0px 11px 0px;
 }
 
-.modal .modal-dialog .modal-content .modal-body .form-group select {
+.modal .modal-dialog .modal-content .modal-body select {
   -moz-appearance: none;
   -moz-box-sizing: border-box;
   -webkit-appearance: none;
@@ -139,7 +134,7 @@ nav .nav_links li button {
   padding: 0.5em 3.5em 0.5em 1em;
 }
 
-.modal .modal-dialog .modal-content .modal-body .form-group select.custom-select {
+.modal .modal-dialog .modal-content .modal-body select.custom-select {
   background-image: linear-gradient(45deg, transparent 50%, #c4c4c4 50%), linear-gradient(135deg, #c4c4c4 50%, transparent 50%);
   background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 0.5em) 0.5em;
   background-repeat: no-repeat;
@@ -182,8 +177,8 @@ nav .nav_links li button {
 }
 
 .details_pet_modal .pet_type {
-  margin-top: 10px !important;
-  margin-right: 23px;
+  display: inline-block;
+  margin: 10px 23px 0px 0px;
 }
 
 .details_pet_modal .modal-footer {
