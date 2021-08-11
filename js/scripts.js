@@ -36,7 +36,12 @@ let all_pets = [
 	},
 ];
 
-
+/**
+ *   DOCU: This function is used to check whether the input type in add_pet_form has been populated again <br />
+ * 	 This if it is it remove the for shake class <br />
+ *   Last updated at: August 11, 2021
+ *   @author Ivan Christian Jay
+ */
 function checkInput(){
 	if($(this).val().length > 0){
 		$(this).removeClass("form_shake");
@@ -45,7 +50,7 @@ function checkInput(){
 
 /**
  *   DOCU: Load the pet list in to the DOM <br />
- *   Last updated at: July 27, 2021 <br />
+ *   Last updated at: July 27, 2021 
  *   @author Ivan Christian Jay
  */
 function loadPets() {
