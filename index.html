@@ -156,21 +156,15 @@
 					<form action="#" method="POST" id="edit_pet_form">
 						<input type="hidden" name="pet_id" class="pet_id" />
 						<div class="modal-body">
-							<div class="form-group">
-								<div class="col-md-3">
-									<label for="pet_name">Pet Type</label>
-								</div>
-								<div class="col-md-9">
-									<select class="form-control custom-select pet_type" id="pet_type_edit" name="pet_type">
-										<option value="Pig">Pig</option>
-										<option value="Dog">Dog</option>
-										<option value="Dog">Duck</option>
-										<option value="Cat">Cat</option>
-										<option value="Horse">Horse</option>
-										<option value="Penguin">Penguin</option>
-									</select>
-								</div>
-							</div>
+							<label for="pet_name">Pet Type</label>
+							<select class="form-control custom-select pet_type" id="pet_type_edit" name="pet_type">
+								<option value="Pig">Pig</option>
+								<option value="Dog">Dog</option>
+								<option value="Dog">Duck</option>
+								<option value="Cat">Cat</option>
+								<option value="Horse">Horse</option>
+								<option value="Penguin">Penguin</option>
+							</select>	
 						</div>
 						<div class="modal-footer">
 							<button type="submit" class="btn btn_update_pet">
@@ -192,7 +186,9 @@
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
-			<div class="toast-body"><span class="added_pet_name"></span>, has been added to pet list.</div>
+			<div class="toast-body">
+				<span class="added_pet_name"></span>, has been added to pet list.
+			</div>
 		</div>
 	</body>
 </html>

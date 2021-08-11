@@ -104,17 +104,17 @@ nav .nav_links li button {
 .modal .modal-dialog .modal-content .modal-body label {
   color: #bdbdbd;
   font: 14px;
-  width: 100px;
   margin: 0px 0px 20px 0px;
+  width: 100px;
 }
 
 .modal .modal-dialog .modal-content .modal-body .form-control {
   background: #f2f2f2;
   border: none;
   color: #333333;
-  width: 345px;
   display: inline-block;
   margin: 0px 0px 11px 0px;
+  width: 345px;
 }
 
 .modal .modal-dialog .modal-content .modal-body select {
