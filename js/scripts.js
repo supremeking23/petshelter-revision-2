@@ -99,12 +99,10 @@ function addPetAction() {
  *   @author Ivan Christian Jay
  */
 function showPetDetailsModal() {
-	let pet_id = $(this).parent().parent().data("petId");
-	let selected_pet = all_pets.filter((pet) => pet.id == pet_id);
-	let pet_name = $(".details_pet_modal").find(".pet_name");
-	let pet_type = $(".details_pet_modal").find(".pet_type");
-	pet_name.text(`${selected_pet[0].pet_name}`);
-	pet_type.text(`${selected_pet[0].pet_type}`);
+	let selected_pet = all_pets.filter((pet) => pet.id == $(this).parent().parent().data("petId"));
+	$(".details_pet_modal").find(".pet_name").text(`${selected_pet[0].pet_name}`);
+	$(".details_pet_modal").find(".pet_type").text(`${selected_pet[0].pet_type}`);
+	
 }
 
 /**
