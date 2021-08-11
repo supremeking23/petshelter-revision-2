@@ -1,10 +1,10 @@
 $(document).ready(function () {
 	load_pets();
-	$("#add_pet_form").submit(addPetAction);
-	$("#edit_pet_form").submit(updatePetAction);
 	$("body")
 			.on("click", ".details_pet_open_modal", showPetDetailsModal)
-			.on("click", ".edit_pet_open_modal", editPetDetailsModal);
+			.on("click", ".edit_pet_open_modal", editPetDetailsModal)
+			.on("submit","#add_pet_form",addPetAction)
+			.on("submit","#edit_pet_form",updatePetAction);
 });
 
 let all_pets = [
