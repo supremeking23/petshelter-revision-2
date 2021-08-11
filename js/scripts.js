@@ -132,13 +132,14 @@ function showPetDetailsModal() {
 */
 function editPetDetailsModal(e) {
 	e.preventDefault();
-	let selected_pet = all_pets.filter((pet) => pet.id == $(this).parent().parent().data("petId")); // change . closest
-	
-	$(".edit_pet_modal").find(".pet_id").val(selected_pet[0].id);
-	$(".edit_pet_modal").find(".pet_name").text(`${selected_pet[0].pet_name}`);
-	$(`.edit_pet_modal`)
-						.find(`.pet_type option:contains("${selected_pet[0].pet_type}")`)
-						.attr("selected", "selected");
+	let selected_pet = all_pets.filter((pet) => pet.id == $(this).closest("tr").data("petId"));
+	let edit_pet_modal = $(".edit_pet_modal");
+
+	edit_pet_modal.find(".pet_id").val(selected_pet[0].id);
+	edit_pet_modal.find(".pet_name").text(`${selected_pet[0].pet_name}`);
+	edit_pet_modal
+				  .find(`.pet_type option:contains("${selected_pet[0].pet_type}")`)
+				  .prop("selected", true);
 }
 
 /**
