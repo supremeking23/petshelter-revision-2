@@ -227,32 +227,32 @@ nav .nav_links li button {
   margin-right: 10px;
 }
 
-.banner {
+#banner {
   font-family: "Do Hyeon", sans-serif;
   position: relative;
   width: 861px;
 }
 
-.banner h1 {
+#banner h1 {
   color: #141414;
   font-size: 48px;
   width: 264px;
 }
 
-.banner h1 #adopt {
+#banner h1 #adopt {
   color: #ff5c4c;
 }
 
-.banner h1 #shop {
+#banner h1 #shop {
   color: #bdbdbd;
 }
 
-.banner p {
+#banner p {
   color: #bdbdbd;
   width: 300px;
 }
 
-.banner img {
+#banner img {
   position: absolute;
   right: 0px;
   top: 0px;
