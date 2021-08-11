@@ -3,6 +3,8 @@ $light-gray: #e5e5e5; /*background*/
 $light-pink: #ff5c4c;
 $light-gray-secondary: #bdbdbd;
 $black: #333333;
+$dohyeon_font: "Do Hyeon", sans-serif;
+$kanit_font: "Kanit", sans-serif;
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -36,26 +38,28 @@ nav {
 
 	.brand {
 		color: #141414;
-		font-family: "Do Hyeon", sans-serif;
-		font-size: 24px;
+		font: 24px/auto $dohyeon_font;
 		margin: 23px 288px 24px 24px;
 	}
 
 	.nav_links {
+		
 		a {
 			color: $light-gray-secondary;
-			font-family: "Kanit", sans-serif;
-			font-size: 14px;
+			font: 14px/auto $kanit_font;
 			margin: 23px 48px 24px 0px;
+			
 			&.active {
 				color: $light-pink;
 			}
 		}
+
 	}
 }
 
 /*Toast*/
 .toast {
+	
 	.toast-header {
 		background: $light-pink;
 		color: #fff;
@@ -73,7 +77,7 @@ nav {
 			.modal-header {
 				border-bottom: none;
 				.modal-title {
-					font-family: "Kanit", sans-serif;
+					font-family: $kanit_font;
 					font-weight: bold;
 				}
 			}
