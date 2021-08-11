@@ -52,10 +52,10 @@ function checkInput(){
 }
 
 /**
- *   DOCU: Load the pet list in to the DOM <br />
- *   Last updated at: August 11, 2021
- *   @author Ivan Christian Jay
- */
+*   DOCU: Load the pet list in to the DOM <br />
+*   Last updated at: August 11, 2021
+*   @author Ivan Christian Jay
+*/
 function loadPets() {
 	let pets = ``;
 	
@@ -110,11 +110,11 @@ function addPetAction() {
 }
 
 /**
- *   DOCU: Show pet details when the user click details on a specific pet <br />
- *   Triggered by .on("click", ".details_pet_open_modal", showPetDetailsModal) <br />
- *   Last updated at: August 11, 2021
- *   @author Ivan Christian Jay
- */
+*   DOCU: Show pet details when the user click details on a specific pet <br />
+*   Triggered by .on("click", ".details_pet_open_modal", showPetDetailsModal) <br />
+*   Last updated at: August 11, 2021
+*   @author Ivan Christian Jay
+*/
 function showPetDetailsModal() {	
 	let selected_pet = all_pets.filter((pet) => pet.id == $(this).closest("tr").data("petId"));
 	let details_pet_modal = $(".details_pet_modal");
@@ -143,11 +143,11 @@ function editPetDetailsModal(e) {
 }
 
 /**
- *   DOCU: Update pet to the pet list array <br />
- *   Triggered by .on("submit","#edit_pet_form",updatePetAction); <br />
- *   Last updated at: July 27, 2021 
- *   @author Ivan Christian Jay
- */
+*   DOCU: Update pet to the pet list array <br />
+*   Triggered by .on("submit","#edit_pet_form",updatePetAction); <br />
+*   Last updated at: July 27, 2021 
+*   @author Ivan Christian Jay
+*/
 function updatePetAction() {
 	all_pets[all_pets.findIndex((pet) => pet.id === parseInt($(".pet_id").val()))].pet_type = $("#pet_type_edit").val();
 	$(".edit_pet_modal").modal("hide");
