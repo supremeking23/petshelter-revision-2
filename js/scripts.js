@@ -63,9 +63,7 @@ function clearAddPetForm(){
 function checkInput(){
 	let pet_input = $(this);
 	
-	if(pet_input.val().length > 0){
-		pet_input.removeClass("form_shake");
-	}
+	(pet_input.val().length > 0) ? pet_input.removeClass("form_shake") : "";
 }
 
 /**
