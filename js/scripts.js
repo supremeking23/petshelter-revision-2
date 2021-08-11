@@ -4,7 +4,8 @@ $(document).ready(function () {
 			.on("click", ".details_pet_open_modal", showPetDetailsModal)
 			.on("click", ".edit_pet_open_modal", editPetDetailsModal)
 			.on("submit","#add_pet_form",addPetAction)
-			.on("submit","#edit_pet_form",updatePetAction);
+			.on("submit","#edit_pet_form",updatePetAction)
+			.on("input","#add_pet_form #pet_name",checkInput);
 });
 
 let all_pets = [
@@ -34,6 +35,13 @@ let all_pets = [
 		pet_type: "Penguin",
 	},
 ];
+
+
+function checkInput(){
+	if($(this).val().length > 0){
+		$(this).removeClass("form_shake");
+	}
+}
 
 /**
  *   DOCU: Load the pet list in to the DOM <br />
