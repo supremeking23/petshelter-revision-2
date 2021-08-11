@@ -127,11 +127,8 @@ function editPetDetailsModal(e) {
  *   Last updated at: July 27, 2021 
  *   @author Ivan Christian Jay
  */
-function updatePetAction(e) {
-	let pet_id_input_value = $(".pet_id").val();
-	let pet_to_update = all_pets.findIndex((pet) => pet.id === parseInt(pet_id_input_value));
-	let pet_type = $("#pet_type_edit").val();
-	all_pets[pet_to_update].pet_type = pet_type;
+function updatePetAction() {
+	all_pets[all_pets.findIndex((pet) => pet.id === parseInt($(".pet_id").val()))].pet_type = $("#pet_type_edit").val();
 	$(".edit_pet_modal").modal("hide");
 	loadPets();
 	return false;
