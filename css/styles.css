@@ -378,16 +378,16 @@ body main table tr {
   margin: 0px 0px 5px 0px;
 }
 
-body main table tr td.pet_name {
+body main table tr td:nth-child(1) {
   margin: 0px 0px 0px 24px;
   width: 230px;
 }
 
-body main table tr td.pet_type {
+body main table tr td:nth-child(2) {
   width: 100px;
 }
 
-body main table tr td.actions {
+body main table tr td:nth-child(3) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -397,18 +397,18 @@ body main table tr td.actions {
   margin: 0px 24.5px 0px 0px;
 }
 
-body main table tr td.actions button {
+body main table tr td:nth-child(3) button {
   background: transparent;
   border: none;
   color: #bdbdbd;
   font-size: 18px;
 }
 
-body main table tr td.actions button i.fas, body main table tr td.actions button i.far {
+body main table tr td:nth-child(3) button i.fas, body main table tr td:nth-child(3) button i.far {
   margin: 0px 14px 0px 34px;
 }
 
-body main table tr td.actions button:hover {
+body main table tr td:nth-child(3) button:hover {
   color: #bdbdbd;
 }
 
