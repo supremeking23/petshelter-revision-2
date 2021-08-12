@@ -31,7 +31,7 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #ffffff;
+  background: #fff;
   -webkit-box-shadow: 0px 8px 40px 0px rgba(34, 69, 82, 0.15);
           box-shadow: 0px 8px 40px 0px rgba(34, 69, 82, 0.15);
   display: -webkit-box;
@@ -51,20 +51,34 @@ nav {
 
 nav .brand {
   color: #141414;
-  font-family: "Do Hyeon", sans-serif;
-  font-size: 24px;
+  font: 24px "Do Hyeon", sans-serif;
   margin: 23px 288px 24px 24px;
 }
 
-nav .nav_links a {
+nav .nav_links {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  margin: 0px 24px 0px 0px;
+}
+
+nav .nav_links li a {
   color: #bdbdbd;
   font-family: "Kanit", sans-serif;
   font-size: 14px;
   margin: 23px 48px 24px 0px;
 }
 
-nav .nav_links a.active {
+nav .nav_links li a.active {
   color: #ff5c4c;
+}
+
+nav .nav_links li button {
+  margin: 1px 0px 0px 0px;
 }
 
 /*Toast*/
@@ -87,28 +101,26 @@ nav .nav_links a.active {
   font-weight: bold;
 }
 
-.modal .modal-dialog .modal-content .modal-body .form-group {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.modal .modal-dialog .modal-content .modal-body {
+  font: 14px/24px "Kanit", sans-serif;
 }
 
-.modal .modal-dialog .modal-content .modal-body .form-group label {
+.modal .modal-dialog .modal-content .modal-body label {
   color: #bdbdbd;
-  font-size: 14px;
+  margin: 0px 0px 20px 0px;
   width: 100px;
 }
 
-.modal .modal-dialog .modal-content .modal-body .form-group .form-control {
+.modal .modal-dialog .modal-content .modal-body .form-control {
   background: #f2f2f2;
   border: none;
   color: #333333;
+  display: inline-block;
+  margin: 0px 0px 11px 0px;
+  width: 345px;
 }
 
-.modal .modal-dialog .modal-content .modal-body .form-group select {
+.modal .modal-dialog .modal-content .modal-body select {
   -moz-appearance: none;
   -moz-box-sizing: border-box;
   -webkit-appearance: none;
@@ -118,14 +130,12 @@ nav .nav_links a.active {
   box-sizing: border-box;
   color: #333333;
   display: inline-block;
-  font-size: 14px;
-  font: inherit;
-  line-height: 1.5em;
+  line-height: 24px;
   margin: 0;
   padding: 0.5em 3.5em 0.5em 1em;
 }
 
-.modal .modal-dialog .modal-content .modal-body .form-group select.custom-select {
+.modal .modal-dialog .modal-content .modal-body select.custom-select {
   background-image: linear-gradient(45deg, transparent 50%, #c4c4c4 50%), linear-gradient(135deg, #c4c4c4 50%, transparent 50%);
   background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 0.5em) 0.5em;
   background-repeat: no-repeat;
@@ -142,8 +152,9 @@ nav .nav_links a.active {
 .btn_update_pet {
   background: #ff5c4c;
   color: #fff;
-  font-size: 14px;
-  margin-right: 17px;
+  font: 14px/21px "Kanit", sans-serif;
+  height: 35px;
+  margin: 0px 17px 0px 0px;
   padding: 6px 7px 9px 0px;
 }
 
@@ -158,8 +169,7 @@ nav .nav_links a.active {
 .btn_adopt_pet i,
 .btn_like_pet i,
 .btn_update_pet i {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 0px 10px;
 }
 
 .btn_like_pet {
@@ -168,8 +178,8 @@ nav .nav_links a.active {
 }
 
 .details_pet_modal .pet_type {
-  margin-top: 10px !important;
-  margin-right: 23px;
+  display: inline-block;
+  margin: 10px 23px 0px 0px;
 }
 
 .details_pet_modal .modal-footer {
@@ -185,14 +195,10 @@ nav .nav_links a.active {
 
 .details_pet_modal .modal-footer p {
   color: #bdbdbd;
-  font-family: "Kanit", sans-serif;
-  font-size: 18px;
+  font: 18px/21px "Kanit", sans-serif;
   height: 22px;
-  margin-left: 0px !important;
-  margin-right: 23px;
-  margin-top: 0px !important;
+  margin: 0px 23px 0px 0px;
   text-align: right;
-  width: 100px !important;
 }
 
 .details_pet_modal .modal-footer .button_group {
@@ -204,8 +210,8 @@ nav .nav_links a.active {
 .btn_add_pet_process {
   background: #ff5c4c;
   color: #fff;
-  font-size: 14px;
-  margin-right: 17px;
+  font: 14px/21px "Kanit", sans-serif;
+  margin: 0px 17px 0px 0px;
   padding: 5.72 0px 6.68px 0px;
 }
 
@@ -214,46 +220,38 @@ nav .nav_links a.active {
 }
 
 .btn_add_pet_process i {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 0px 10px;
 }
 
-.banner {
+#banner {
   font-family: "Do Hyeon", sans-serif;
+  position: relative;
+  width: 861px;
 }
 
-.banner .banner_text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.banner .banner_text h1 {
-  font-size: 48px;
+#banner h1 {
   color: #141414;
+  font-size: 48px;
   width: 264px;
 }
 
-.banner .banner_text h1 .adopt {
+#banner h1 #adopt {
   color: #ff5c4c;
 }
 
-.banner .banner_text h1 .shop {
+#banner h1 #shop {
   color: #bdbdbd;
 }
 
-.banner .banner_text p {
+#banner p {
   color: #bdbdbd;
+  width: 300px;
 }
 
-.banner .banner_image img {
+#banner img {
+  position: absolute;
+  right: 0px;
+  top: 0px;
   width: 595.32px;
 }
 
@@ -287,11 +285,11 @@ main table tr {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 5px;
+  margin: 0px 0px 5px 0px;
 }
 
 main table tr td.pet_name {
-  margin-left: 24px;
+  margin: 0px 0px 0px 24px;
   width: 230px;
 }
 
@@ -306,7 +304,7 @@ main table tr td.actions {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-right: 24.5px;
+  margin: 0px 24.5px 0px 0px;
 }
 
 main table tr td.actions button {
@@ -317,8 +315,7 @@ main table tr td.actions button {
 }
 
 main table tr td.actions button i.fas, main table tr td.actions button i.far {
-  margin-left: 34px;
-  margin-right: 14px;
+  margin: 0px 14px 0px 34px;
 }
 
 main table tr td.actions button:hover {
@@ -327,8 +324,7 @@ main table tr td.actions button:hover {
 
 footer {
   color: #bdbdbd;
-  font-family: "Kanit", sans-serif;
-  font-size: 14px;
+  font: 14px/21px "Kanit", sans-serif;
   letter-spacing: 2px;
   margin: 50px 0px;
   text-align: center;
@@ -339,10 +335,8 @@ footer a {
 }
 
 .form_shake {
-  -webkit-animation: shake 0.5s;
-          animation: shake 0.5s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
+  -webkit-animation: shake 0.5s 1;
+          animation: shake 0.5s 1;
   border: 2px solid red !important;
 }
 

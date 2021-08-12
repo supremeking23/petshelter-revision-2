@@ -1,8 +1,13 @@
 /*variables*/
-$light-gray: #e5e5e5; /*background*/
-$light-pink: #ff5c4c;
-$light-gray-secondary: #bdbdbd;
 $black: #333333;
+$black_secondary: #141414;
+$dohyeon_font: "Do Hyeon", sans-serif;
+$kanit_font: "Kanit", sans-serif;
+$light_gray_secondary: #bdbdbd;
+$light_gray: #e5e5e5; /*background*/
+$light_pink: #ff5c4c;
+$lighter_gray: #f5f9fa;
+$white:#fff;
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -18,14 +23,14 @@ $black: #333333;
 
 body {
 	align-items: center;
-	background: #f5f9fa;
+	background: $lighter_gray;
 	display: flex;
 	flex-direction: column;
 }
 
 nav {
 	align-items: center;
-	background: #ffffff;
+	background: $white;
 	box-shadow: 0px 8px 40px 0px rgba(34, 69, 82, 0.15);
 	display: flex;
 	flex-direction: row;
@@ -35,20 +40,30 @@ nav {
 	width: 901px;
 
 	.brand {
-		color: #141414;
-		font-family: "Do Hyeon", sans-serif;
-		font-size: 24px;
+		color: $black_secondary;
+		font: 24px $dohyeon_font;
 		margin: 23px 288px 24px 24px;
 	}
 
 	.nav_links {
-		a {
-			color: $light-gray-secondary;
-			font-family: "Kanit", sans-serif;
-			font-size: 14px;
-			margin: 23px 48px 24px 0px;
-			&.active {
-				color: $light-pink;
+		align-items: center;
+		display: flex;
+		list-style-type:none;
+		margin: 0px 24px 0px 0px;
+		
+		li {
+			a {
+				color: $light_gray_secondary;
+				font-family: $kanit_font;
+				font-size: 14px;
+				margin: 23px 48px 24px 0px;
+				&.active {
+					color: $light_pink;
+				}
+			}
+
+			button {
+				margin: 1px 0px 0px 0px;
 			}
 		}
 	}
@@ -56,9 +71,10 @@ nav {
 
 /*Toast*/
 .toast {
+	
 	.toast-header {
-		background: $light-pink;
-		color: #fff;
+		background: $light_pink;
+		color: $white;
 	}
 
 	.added_pet_name {
@@ -73,24 +89,26 @@ nav {
 			.modal-header {
 				border-bottom: none;
 				.modal-title {
-					font-family: "Kanit", sans-serif;
+					font-family: $kanit_font;
 					font-weight: bold;
 				}
 			}
 			.modal-body {
-				.form-group {
-					align-items: center;
-					display: flex;
+					font:  14px/24px $kanit_font;
 					label {
-						color: $light-gray-secondary;
-						font-size: 14px;
+						color: $light_gray_secondary;
+						margin: 0px 0px 20px 0px;
 						width: 100px;
 					}
 					.form-control {
 						background: #f2f2f2;
 						border: none;
 						color: $black;
+						display: inline-block;
+						margin: 0px 0px 11px 0px;
+						width: 345px;
 					}
+
 					select {
 						-moz-appearance: none;
 						-moz-box-sizing: border-box;
@@ -101,9 +119,7 @@ nav {
 						box-sizing: border-box;
 						color:$black;
 						display: inline-block;
-						font-size: 14px;
-						font: inherit;
-						line-height: 1.5em;
+						line-height: 24px;
 						margin: 0;
 						padding: 0.5em 3.5em 0.5em 1em;
 					}
@@ -117,7 +133,6 @@ nav {
 						}
 					}
 					
-				}
 			}
 			.modal-footer {
 				border-top: none;
@@ -131,96 +146,94 @@ nav {
 .btn_adopt_pet,
 .btn_like_pet,
 .btn_update_pet {
-	background: $light-pink;
-	color: #fff;
-	font-size: 14px;
-	margin-right: 17px;
+	background: $light_pink;
+	color: $white;
+	font: 14px/21px $kanit_font;
+	height: 35px;
+	margin: 0px 17px 0px 0px;
 	padding: 6px 7px 9px 0px;
 
 	&:hover {
-		color: #fff;
+		color: $white;
 	}
 
 	i {
-		margin-left: 10px;
-		margin-right: 10px;
+		margin: 0px 10px;
 	}
 }
 
 .btn_like_pet {
 	background: #f5c388;
-	color: #fff;
+	color: $white;
 }
 
 .details_pet_modal {
 	.pet_type {
-		margin-top: 10px !important;
-		margin-right: 23px;
+		display: inline-block;
+		margin: 10px 23px 0px 0px;
 	}
 	.modal-footer {
 		background: #f2f2f2;
 		display: flex;
 		flex-direction: row;
 		p {
-			color: $light-gray-secondary;
-			font-family: "Kanit", sans-serif;
-			font-size: 18px;
+			color: $light_gray_secondary;
+			font: 18px/21px $kanit_font;
 			height: 22px;
-			margin-left: 0px !important;
-			margin-right: 23px;
-			margin-top: 0px !important;
+			margin: 0px 23px 0px 0px;
 			text-align: right;
-			width: 100px !important;
 		}
 		.button_group {
-			display: flex;
+			display :flex;
 		}
 	}
 }
 
 .btn_add_pet_process {
-	background: $light-pink;
-	color: #fff;
-	font-size: 14px;
-	margin-right: 17px;
+	background: $light_pink;
+	color: $white;
+	font: 14px/21px $kanit_font;
+	margin: 0px 17px 0px 0px;
 	padding: 5.72 0px 6.68px 0px;
+	
 	&:hover {
 		color: #fff;
 	}
+	
 	i {
-		margin-left: 10px;
-		margin-right: 10px;
+		margin: 0px 10px;
 	}
 }
 
-.banner {
-	font-family: "Do Hyeon", sans-serif;
-	.banner_text {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		h1 {
-			font-size: 48px;
-			color: #141414;
-			width: 264px;
-			.adopt {
-				color: $light-pink;
-			}
-			.shop {
-				color: $light-gray-secondary;
-			}
+#banner {
+	font-family: $dohyeon_font;
+	position: relative;
+	width: 861px;
+	
+	h1 {
+		color: $black_secondary;
+		font-size: 48px;
+		width: 264px;
+		#adopt {
+			color: $light_pink;
 		}
-
-		p {
-			color: $light-gray-secondary;
+		#shop {
+			color: $light_gray_secondary;
 		}
 	}
 
-	.banner_image {
-		img {
-			width: 595.32px;
-		}
+	p {
+		color: $light_gray_secondary;
+		width: 300px;
 	}
+	
+	img {
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		width: 595.32px;
+	}
+	
 }
 
 main {
@@ -235,6 +248,7 @@ main {
 
 	table {
 		width: 100%;
+		
 		tr {
 			align-items: center;
 			background: #fff;
@@ -242,32 +256,39 @@ main {
 			display: flex;
 			height: 69px;
 			justify-content: space-between;
-			margin-bottom: 5px;
+			margin: 0px 0px 5px 0px;
+			
 			td {
+				
 				&.pet_name {
-					margin-left: 24px;
+					margin: 0px 0px 0px 24px;
 					width: 230px;
 				}
+				
 				&.pet_type {
 					width: 100px;
 				}
+				
 				&.actions {
 					display: flex;
 					justify-content: space-between;
-					margin-right: 24.5px;
+					margin: 0px 24.5px 0px 0px;
+
 					button {
 						background: transparent;
 						border:none;
-						color: $light-gray-secondary;
+						color: $light_gray_secondary;
 						font-size: 18px;
+					
 						i {
+							
 							&.fas,&.far {
-								margin-left: 34px;
-								margin-right: 14px;
+								margin: 0px 14px 0px 34px;
 							}
+					
 						}
 						&:hover {
-							color: $light-gray-secondary;
+							color: $light_gray_secondary;
 						}
 					}
 				}
@@ -277,21 +298,20 @@ main {
 }
 
 footer {
-	color: $light-gray-secondary;
-	font-family: "Kanit", sans-serif;
-	font-size: 14px;
+	color: $light_gray_secondary;
+	font: 14px/21px $kanit_font;
 	letter-spacing: 2px;
 	margin: 50px 0px;
 	text-align: center;
+	
 	a {
-		color: $light-pink;
+		color: $light_pink;
 	}
 }
 
 
 .form_shake {
-	animation: shake 0.5s;
-	animation-iteration-count: 1;
+	animation: shake 0.5s 1;
 	border: 2px solid red !important;
 }
 @keyframes shake {
