@@ -323,55 +323,55 @@ body {
           flex-direction: column;
 }
 
-#banner {
+body #banner {
   font-family: "Do Hyeon", sans-serif;
   position: relative;
   width: 861px;
 }
 
-#banner h1 {
+body #banner h1 {
   color: #141414;
   font-size: 48px;
   width: 264px;
 }
 
-#banner h1 #adopt {
+body #banner h1 #adopt {
   color: #ff5c4c;
 }
 
-#banner h1 #shop {
+body #banner h1 #shop {
   color: #bdbdbd;
 }
 
-#banner p {
+body #banner p {
   color: #bdbdbd;
   width: 300px;
 }
 
-#banner img {
+body #banner img {
   position: absolute;
   right: 0px;
   top: 0px;
   width: 595.32px;
 }
 
-main {
+body main {
   font-family: "Kanit", sans-serif;
   margin-top: 60px;
   width: 861px;
 }
 
-main h2 {
+body main h2 {
   font-size: 24px;
   margin-bottom: 30px;
   text-align: center;
 }
 
-main table {
+body main table {
   width: 100%;
 }
 
-main table tr {
+body main table tr {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -388,16 +388,16 @@ main table tr {
   margin: 0px 0px 5px 0px;
 }
 
-main table tr td.pet_name {
+body main table tr td.pet_name {
   margin: 0px 0px 0px 24px;
   width: 230px;
 }
 
-main table tr td.pet_type {
+body main table tr td.pet_type {
   width: 100px;
 }
 
-main table tr td.actions {
+body main table tr td.actions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -407,22 +407,22 @@ main table tr td.actions {
   margin: 0px 24.5px 0px 0px;
 }
 
-main table tr td.actions button {
+body main table tr td.actions button {
   background: transparent;
   border: none;
   color: #bdbdbd;
   font-size: 18px;
 }
 
-main table tr td.actions button i.fas, main table tr td.actions button i.far {
+body main table tr td.actions button i.fas, body main table tr td.actions button i.far {
   margin: 0px 14px 0px 34px;
 }
 
-main table tr td.actions button:hover {
+body main table tr td.actions button:hover {
   color: #bdbdbd;
 }
 
-footer {
+body footer {
   color: #bdbdbd;
   font: 14px/21px "Kanit", sans-serif;
   letter-spacing: 2px;
@@ -430,7 +430,7 @@ footer {
   text-align: center;
 }
 
-footer a {
+body footer a {
   color: #ff5c4c;
 }
 /*# sourceMappingURL=styles.css.map */

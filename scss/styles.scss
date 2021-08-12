@@ -25,115 +25,113 @@ body {
 	background: $lighter_gray;
 	display: flex;
 	flex-direction: column;
-}
 
-
-// buttons
-
-
-#banner {
-	font-family: $dohyeon_font;
-	position: relative;
-	width: 861px;
-	
-	h1 {
-		color: $black_secondary;
-		font-size: 48px;
-		width: 264px;
-		#adopt {
-			color: $light_pink;
-		}
-		#shop {
-			color: $light_gray_secondary;
-		}
-	}
-
-	p {
-		color: $light_gray_secondary;
-		width: 300px;
-	}
-	
-	img {
-		position: absolute;
-		right: 0px;
-		top: 0px;
-		width: 595.32px;
-	}
-	
-}
-
-main {
-	font-family: "Kanit", sans-serif;
-	margin-top: 60px;
-	width: 861px;
-	h2 {
-		font-size: 24px;
-		margin-bottom: 30px;
-		text-align: center;
-	}
-
-	table {
-		width: 100%;
+	#banner {
+		font-family: $dohyeon_font;
+		position: relative;
+		width: 861px;
 		
-		tr {
-			align-items: center;
-			background: #fff;
-			box-shadow: 0px 8px 40px 0px rgba(34, 69, 82, 0.05);
-			display: flex;
-			height: 69px;
-			justify-content: space-between;
-			margin: 0px 0px 5px 0px;
+		h1 {
+			color: $black_secondary;
+			font-size: 48px;
+			width: 264px;
+			#adopt {
+				color: $light_pink;
+			}
+			#shop {
+				color: $light_gray_secondary;
+			}
+		}
+	
+		p {
+			color: $light_gray_secondary;
+			width: 300px;
+		}
+		
+		img {
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			width: 595.32px;
+		}
+		
+	}
+	
+	main {
+		font-family: "Kanit", sans-serif;
+		margin-top: 60px;
+		width: 861px;
+		h2 {
+			font-size: 24px;
+			margin-bottom: 30px;
+			text-align: center;
+		}
+	
+		table {
+			width: 100%;
 			
-			td {
+			tr {
+				align-items: center;
+				background: #fff;
+				box-shadow: 0px 8px 40px 0px rgba(34, 69, 82, 0.05);
+				display: flex;
+				height: 69px;
+				justify-content: space-between;
+				margin: 0px 0px 5px 0px;
 				
-				&.pet_name {
-					margin: 0px 0px 0px 24px;
-					width: 230px;
-				}
-				
-				&.pet_type {
-					width: 100px;
-				}
-				
-				&.actions {
-					display: flex;
-					justify-content: space-between;
-					margin: 0px 24.5px 0px 0px;
-
-					button {
-						background: transparent;
-						border:none;
-						color: $light_gray_secondary;
-						font-size: 18px;
+				td {
 					
-						i {
-							
-							&.fas,&.far {
-								margin: 0px 14px 0px 34px;
-							}
+					&.pet_name {
+						margin: 0px 0px 0px 24px;
+						width: 230px;
+					}
 					
-						}
-						&:hover {
+					&.pet_type {
+						width: 100px;
+					}
+					
+					&.actions {
+						display: flex;
+						justify-content: space-between;
+						margin: 0px 24.5px 0px 0px;
+	
+						button {
+							background: transparent;
+							border:none;
 							color: $light_gray_secondary;
+							font-size: 18px;
+						
+							i {
+								
+								&.fas,&.far {
+									margin: 0px 14px 0px 34px;
+								}
+						
+							}
+							&:hover {
+								color: $light_gray_secondary;
+							}
 						}
 					}
 				}
 			}
 		}
 	}
-}
-
-footer {
-	color: $light_gray_secondary;
-	font: 14px/21px $kanit_font;
-	letter-spacing: 2px;
-	margin: 50px 0px;
-	text-align: center;
 	
-	a {
-		color: $light_pink;
+	footer {
+		color: $light_gray_secondary;
+		font: 14px/21px $kanit_font;
+		letter-spacing: 2px;
+		margin: 50px 0px;
+		text-align: center;
+		
+		a {
+			color: $light_pink;
+		}
 	}
+	
+	
+	
 }
-
 
 
