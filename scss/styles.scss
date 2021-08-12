@@ -1,13 +1,12 @@
-/*variables*/
-$black: #333333;
-$black_secondary: #141414;
-$dohyeon_font: "Do Hyeon", sans-serif;
-$kanit_font: "Kanit", sans-serif;
-$light_gray_secondary: #bdbdbd;
-$light_gray: #e5e5e5; /*background*/
-$light_pink: #ff5c4c;
-$lighter_gray: #f5f9fa;
-$white:#fff;
+
+/* reading is from top to bottom */
+@import "partials/variables";
+@import "partials/animation";
+@import "partials/nav";
+@import "partials/modals";
+@import "partials/toasts";
+@import "partials/buttons";
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -26,326 +25,114 @@ body {
 	background: $lighter_gray;
 	display: flex;
 	flex-direction: column;
-}
 
-nav {
-	align-items: center;
-	background: $white;
-	box-shadow: 0px 8px 40px 0px rgba(34, 69, 82, 0.15);
-	display: flex;
-	flex-direction: row;
-	height: 69px;
-	justify-content: space-between;
-	margin: 30px 190px 40px 189px;
-	width: 901px;
-
-	.brand {
-		color: $black_secondary;
-		font: 24px $dohyeon_font;
-		margin: 23px 288px 24px 24px;
-	}
-
-	.nav_links {
-		align-items: center;
-		display: flex;
-		list-style-type:none;
-		margin: 0px 24px 0px 0px;
+	#banner {
+		font-family: $dohyeon_font;
+		position: relative;
+		width: 861px;
 		
-		li {
-			a {
+		h1 {
+			color: $black_secondary;
+			font-size: 48px;
+			width: 264px;
+			
+			#adopt {
+				color: $light_pink;
+			}
+			
+			#shop {
 				color: $light_gray_secondary;
-				font-family: $kanit_font;
-				font-size: 14px;
-				margin: 23px 48px 24px 0px;
-				&.active {
-					color: $light_pink;
-				}
-			}
-
-			button {
-				margin: 1px 0px 0px 0px;
 			}
 		}
-	}
-}
-
-/*Toast*/
-.toast {
 	
-	.toast-header {
-		background: $light_pink;
-		color: $white;
-	}
-
-	.added_pet_name {
-		font-weight: bold;
-	}
-}
-
-/*modal*/
-.modal {
-	.modal-dialog {
-		.modal-content {
-			.modal-header {
-				border-bottom: none;
-				.modal-title {
-					font-family: $kanit_font;
-					font-weight: bold;
-				}
-			}
-			.modal-body {
-					font:  14px/24px $kanit_font;
-					label {
-						color: $light_gray_secondary;
-						margin: 0px 0px 20px 0px;
-						width: 100px;
-					}
-					.form-control {
-						background: #f2f2f2;
-						border: none;
-						color: $black;
-						display: inline-block;
-						margin: 0px 0px 11px 0px;
-						width: 345px;
-					}
-
-					select {
-						-moz-appearance: none;
-						-moz-box-sizing: border-box;
-						-webkit-appearance: none;
-						-webkit-box-sizing: border-box;
-						background-color: white;
-						border-radius: 4px;
-						box-sizing: border-box;
-						color:$black;
-						display: inline-block;
-						line-height: 24px;
-						margin: 0;
-						padding: 0.5em 3.5em 0.5em 1em;
-					}
-
-					select {
-						&.custom-select {
-							background-image: linear-gradient(45deg, transparent 50%, #c4c4c4 50%), linear-gradient(135deg, #c4c4c4 50%, transparent 50%);
-							background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 0.5em) 0.5em;
-							background-repeat: no-repeat;
-							background-size: 5px 5px, 5px 5px, 1.5em 1.5em;
-						}
-					}
-					
-			}
-			.modal-footer {
-				border-top: none;
-			}
-		}
-	}
-}
-
-// buttons
-.btn_add_pet_to_shelter,
-.btn_adopt_pet,
-.btn_like_pet,
-.btn_update_pet {
-	background: $light_pink;
-	color: $white;
-	font: 14px/21px $kanit_font;
-	height: 35px;
-	margin: 0px 17px 0px 0px;
-	padding: 6px 7px 9px 0px;
-
-	&:hover {
-		color: $white;
-	}
-
-	i {
-		margin: 0px 10px;
-	}
-}
-
-.btn_like_pet {
-	background: #f5c388;
-	color: $white;
-}
-
-.details_pet_modal {
-	.pet_type {
-		display: inline-block;
-		margin: 10px 23px 0px 0px;
-	}
-	.modal-footer {
-		background: #f2f2f2;
-		display: flex;
-		flex-direction: row;
 		p {
 			color: $light_gray_secondary;
-			font: 18px/21px $kanit_font;
-			height: 22px;
-			margin: 0px 23px 0px 0px;
-			text-align: right;
+			width: 300px;
 		}
-		.button_group {
-			display :flex;
-		}
-	}
-}
-
-.btn_add_pet_process {
-	background: $light_pink;
-	color: $white;
-	font: 14px/21px $kanit_font;
-	margin: 0px 17px 0px 0px;
-	padding: 5.72 0px 6.68px 0px;
-	
-	&:hover {
-		color: #fff;
-	}
-	
-	i {
-		margin: 0px 10px;
-	}
-}
-
-#banner {
-	font-family: $dohyeon_font;
-	position: relative;
-	width: 861px;
-	
-	h1 {
-		color: $black_secondary;
-		font-size: 48px;
-		width: 264px;
-		#adopt {
-			color: $light_pink;
-		}
-		#shop {
-			color: $light_gray_secondary;
-		}
-	}
-
-	p {
-		color: $light_gray_secondary;
-		width: 300px;
-	}
-	
-	img {
-		position: absolute;
-		right: 0px;
-		top: 0px;
-		width: 595.32px;
-	}
-	
-}
-
-main {
-	font-family: "Kanit", sans-serif;
-	margin-top: 60px;
-	width: 861px;
-	h2 {
-		font-size: 24px;
-		margin-bottom: 30px;
-		text-align: center;
-	}
-
-	table {
-		width: 100%;
 		
-		tr {
-			align-items: center;
-			background: #fff;
-			box-shadow: 0px 8px 40px 0px rgba(34, 69, 82, 0.05);
-			display: flex;
-			height: 69px;
-			justify-content: space-between;
-			margin: 0px 0px 5px 0px;
+		img {
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			width: 595.32px;
+		}
+		
+	}
+	
+	main {
+		font-family: $kanit_font;
+		margin: 60px 0px 0px 0px;
+		width: 861px;
+		
+		h2 {
+			font-size: 24px;
+			margin: 0px 0px 30px 0px;
+			text-align: center;
+		}
+	
+		table {
+			width: 100%;
 			
-			td {
+			tr {
+				align-items: center;
+				background: #fff;
+				box-shadow: 0px 8px 40px 0px rgba(34, 69, 82, 0.05);
+				display: flex;
+				height: 69px;
+				justify-content: space-between;
+				margin: 0px 0px 5px 0px;
 				
-				&.pet_name {
-					margin: 0px 0px 0px 24px;
-					width: 230px;
-				}
-				
-				&.pet_type {
-					width: 100px;
-				}
-				
-				&.actions {
-					display: flex;
-					justify-content: space-between;
-					margin: 0px 24.5px 0px 0px;
-
-					button {
-						background: transparent;
-						border:none;
-						color: $light_gray_secondary;
-						font-size: 18px;
+				td {
 					
-						i {
-							
-							&.fas,&.far {
-								margin: 0px 14px 0px 34px;
-							}
+					&:nth-child(1) {
+						margin: 0px 0px 0px 24px;
+						width: 230px;
+					}
 					
-						}
-						&:hover {
+					&:nth-child(2) {
+						width: 100px;
+					}
+					
+					&:nth-child(3) {
+						display: flex;
+						justify-content: space-between;
+						margin: 0px 24.5px 0px 0px;
+	
+						button {
+							background: transparent;
+							border:none;
 							color: $light_gray_secondary;
+							font-size: 18px;
+						
+							i {
+								
+								&.fas,&.far {
+									margin: 0px 14px 0px 34px;
+								}
+						
+							}
+							&:hover {
+								color: $light_gray_secondary;
+							}
 						}
 					}
 				}
 			}
 		}
 	}
-}
-
-footer {
-	color: $light_gray_secondary;
-	font: 14px/21px $kanit_font;
-	letter-spacing: 2px;
-	margin: 50px 0px;
-	text-align: center;
 	
-	a {
-		color: $light_pink;
+	footer {
+		color: $light_gray_secondary;
+		font: 14px/21px $kanit_font;
+		letter-spacing: 2px;
+		margin: 50px 0px;
+		text-align: center;
+		
+		a {
+			color: $light_pink;
+		}
 	}
+	
 }
 
 
-.form_shake {
-	animation: shake 0.5s 1;
-	border: 2px solid red !important;
-}
-@keyframes shake {
-	0% {
-		transform: translate(1px, 1px) rotate(0deg);
-	}
-	10% {
-		transform: translate(-1px, -2px) rotate(-1deg);
-	}
-	20% {
-		transform: translate(-3px, 0px) rotate(1deg);
-	}
-	30% {
-		transform: translate(3px, 2px) rotate(0deg);
-	}
-	40% {
-		transform: translate(1px, -1px) rotate(1deg);
-	}
-	50% {
-		transform: translate(-1px, 2px) rotate(-1deg);
-	}
-	60% {
-		transform: translate(-3px, 1px) rotate(0deg);
-	}
-	70% {
-		transform: translate(3px, 1px) rotate(-1deg);
-	}
-	80% {
-		transform: translate(-1px, -1px) rotate(1deg);
-	}
-	90% {
-		transform: translate(1px, 2px) rotate(0deg);
-	}
-	100% {
-		transform: translate(1px, -2px) rotate(-1deg);
-	}
-}

@@ -1,339 +1,5 @@
-/*variables*/
+/* reading is from top to bottom */
 /*background*/
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/*reset*/
-.form-control:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-body {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #f5f9fa;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-nav {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #fff;
-  -webkit-box-shadow: 0px 8px 40px 0px rgba(34, 69, 82, 0.15);
-          box-shadow: 0px 8px 40px 0px rgba(34, 69, 82, 0.15);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  height: 69px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 30px 190px 40px 189px;
-  width: 901px;
-}
-
-nav .brand {
-  color: #141414;
-  font: 24px "Do Hyeon", sans-serif;
-  margin: 23px 288px 24px 24px;
-}
-
-nav .nav_links {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style-type: none;
-  margin: 0px 24px 0px 0px;
-}
-
-nav .nav_links li a {
-  color: #bdbdbd;
-  font-family: "Kanit", sans-serif;
-  font-size: 14px;
-  margin: 23px 48px 24px 0px;
-}
-
-nav .nav_links li a.active {
-  color: #ff5c4c;
-}
-
-nav .nav_links li button {
-  margin: 1px 0px 0px 0px;
-}
-
-/*Toast*/
-.toast .toast-header {
-  background: #ff5c4c;
-  color: #fff;
-}
-
-.toast .added_pet_name {
-  font-weight: bold;
-}
-
-/*modal*/
-.modal .modal-dialog .modal-content .modal-header {
-  border-bottom: none;
-}
-
-.modal .modal-dialog .modal-content .modal-header .modal-title {
-  font-family: "Kanit", sans-serif;
-  font-weight: bold;
-}
-
-.modal .modal-dialog .modal-content .modal-body {
-  font: 14px/24px "Kanit", sans-serif;
-}
-
-.modal .modal-dialog .modal-content .modal-body label {
-  color: #bdbdbd;
-  margin: 0px 0px 20px 0px;
-  width: 100px;
-}
-
-.modal .modal-dialog .modal-content .modal-body .form-control {
-  background: #f2f2f2;
-  border: none;
-  color: #333333;
-  display: inline-block;
-  margin: 0px 0px 11px 0px;
-  width: 345px;
-}
-
-.modal .modal-dialog .modal-content .modal-body select {
-  -moz-appearance: none;
-  -moz-box-sizing: border-box;
-  -webkit-appearance: none;
-  -webkit-box-sizing: border-box;
-  background-color: white;
-  border-radius: 4px;
-  box-sizing: border-box;
-  color: #333333;
-  display: inline-block;
-  line-height: 24px;
-  margin: 0;
-  padding: 0.5em 3.5em 0.5em 1em;
-}
-
-.modal .modal-dialog .modal-content .modal-body select.custom-select {
-  background-image: linear-gradient(45deg, transparent 50%, #c4c4c4 50%), linear-gradient(135deg, #c4c4c4 50%, transparent 50%);
-  background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 0.5em) 0.5em;
-  background-repeat: no-repeat;
-  background-size: 5px 5px, 5px 5px, 1.5em 1.5em;
-}
-
-.modal .modal-dialog .modal-content .modal-footer {
-  border-top: none;
-}
-
-.btn_add_pet_to_shelter,
-.btn_adopt_pet,
-.btn_like_pet,
-.btn_update_pet {
-  background: #ff5c4c;
-  color: #fff;
-  font: 14px/21px "Kanit", sans-serif;
-  height: 35px;
-  margin: 0px 17px 0px 0px;
-  padding: 6px 7px 9px 0px;
-}
-
-.btn_add_pet_to_shelter:hover,
-.btn_adopt_pet:hover,
-.btn_like_pet:hover,
-.btn_update_pet:hover {
-  color: #fff;
-}
-
-.btn_add_pet_to_shelter i,
-.btn_adopt_pet i,
-.btn_like_pet i,
-.btn_update_pet i {
-  margin: 0px 10px;
-}
-
-.btn_like_pet {
-  background: #f5c388;
-  color: #fff;
-}
-
-.details_pet_modal .pet_type {
-  display: inline-block;
-  margin: 10px 23px 0px 0px;
-}
-
-.details_pet_modal .modal-footer {
-  background: #f2f2f2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.details_pet_modal .modal-footer p {
-  color: #bdbdbd;
-  font: 18px/21px "Kanit", sans-serif;
-  height: 22px;
-  margin: 0px 23px 0px 0px;
-  text-align: right;
-}
-
-.details_pet_modal .modal-footer .button_group {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.btn_add_pet_process {
-  background: #ff5c4c;
-  color: #fff;
-  font: 14px/21px "Kanit", sans-serif;
-  margin: 0px 17px 0px 0px;
-  padding: 5.72 0px 6.68px 0px;
-}
-
-.btn_add_pet_process:hover {
-  color: #fff;
-}
-
-.btn_add_pet_process i {
-  margin: 0px 10px;
-}
-
-#banner {
-  font-family: "Do Hyeon", sans-serif;
-  position: relative;
-  width: 861px;
-}
-
-#banner h1 {
-  color: #141414;
-  font-size: 48px;
-  width: 264px;
-}
-
-#banner h1 #adopt {
-  color: #ff5c4c;
-}
-
-#banner h1 #shop {
-  color: #bdbdbd;
-}
-
-#banner p {
-  color: #bdbdbd;
-  width: 300px;
-}
-
-#banner img {
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  width: 595.32px;
-}
-
-main {
-  font-family: "Kanit", sans-serif;
-  margin-top: 60px;
-  width: 861px;
-}
-
-main h2 {
-  font-size: 24px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-main table {
-  width: 100%;
-}
-
-main table tr {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #fff;
-  -webkit-box-shadow: 0px 8px 40px 0px rgba(34, 69, 82, 0.05);
-          box-shadow: 0px 8px 40px 0px rgba(34, 69, 82, 0.05);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 69px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 0px 0px 5px 0px;
-}
-
-main table tr td.pet_name {
-  margin: 0px 0px 0px 24px;
-  width: 230px;
-}
-
-main table tr td.pet_type {
-  width: 100px;
-}
-
-main table tr td.actions {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 0px 24.5px 0px 0px;
-}
-
-main table tr td.actions button {
-  background: transparent;
-  border: none;
-  color: #bdbdbd;
-  font-size: 18px;
-}
-
-main table tr td.actions button i.fas, main table tr td.actions button i.far {
-  margin: 0px 14px 0px 34px;
-}
-
-main table tr td.actions button:hover {
-  color: #bdbdbd;
-}
-
-footer {
-  color: #bdbdbd;
-  font: 14px/21px "Kanit", sans-serif;
-  letter-spacing: 2px;
-  margin: 50px 0px;
-  text-align: center;
-}
-
-footer a {
-  color: #ff5c4c;
-}
-
 .form_shake {
   -webkit-animation: shake 0.5s 1;
           animation: shake 0.5s 1;
@@ -432,5 +98,329 @@ footer a {
     -webkit-transform: translate(1px, -2px) rotate(-1deg);
             transform: translate(1px, -2px) rotate(-1deg);
   }
+}
+
+nav {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  -webkit-box-shadow: 0px 8px 40px 0px rgba(34, 69, 82, 0.15);
+          box-shadow: 0px 8px 40px 0px rgba(34, 69, 82, 0.15);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 69px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 30px 190px 40px 189px;
+  width: 901px;
+}
+
+nav .brand {
+  color: #141414;
+  font: 24px "Do Hyeon", sans-serif;
+  margin: 23px 288px 24px 24px;
+}
+
+nav .nav_links {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  margin: 0px 24px 0px 0px;
+}
+
+nav .nav_links li a {
+  color: #bdbdbd;
+  font-family: "Kanit", sans-serif;
+  font-size: 14px;
+  margin: 23px 48px 24px 0px;
+}
+
+nav .nav_links li a.active {
+  color: #ff5c4c;
+}
+
+nav .nav_links li button {
+  margin: 1px 0px 0px 0px;
+}
+
+.modal .modal-dialog .modal-content .modal-header {
+  border-bottom: none;
+}
+
+.modal .modal-dialog .modal-content .modal-header .modal-title {
+  font-family: "Kanit", sans-serif;
+  font-weight: bold;
+}
+
+.modal .modal-dialog .modal-content .modal-body {
+  font: 14px/24px "Kanit", sans-serif;
+}
+
+.modal .modal-dialog .modal-content .modal-body label {
+  color: #bdbdbd;
+  margin: 0px 0px 20px 0px;
+  width: 100px;
+}
+
+.modal .modal-dialog .modal-content .modal-body .form-control {
+  background: #f2f2f2;
+  border: none;
+  color: #333333;
+  display: inline-block;
+  margin: 0px 0px 11px 0px;
+  width: 345px;
+}
+
+.modal .modal-dialog .modal-content .modal-body select {
+  -moz-appearance: none;
+  -moz-box-sizing: border-box;
+  -webkit-appearance: none;
+  -webkit-box-sizing: border-box;
+  background-color: white;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #333333;
+  display: inline-block;
+  line-height: 24px;
+  margin: 0;
+  padding: 0.5em 3.5em 0.5em 1em;
+}
+
+.modal .modal-dialog .modal-content .modal-body select.custom-select {
+  background-image: linear-gradient(45deg, transparent 50%, #c4c4c4 50%), linear-gradient(135deg, #c4c4c4 50%, transparent 50%);
+  background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 0.5em) 0.5em;
+  background-repeat: no-repeat;
+  background-size: 5px 5px, 5px 5px, 1.5em 1.5em;
+}
+
+.modal .modal-dialog .modal-content .modal-footer {
+  border-top: none;
+}
+
+.details_pet_modal .pet_type {
+  display: inline-block;
+  margin: 10px 23px 0px 0px;
+}
+
+.details_pet_modal .modal-footer {
+  background: #f2f2f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.details_pet_modal .modal-footer p {
+  color: #bdbdbd;
+  font: 18px/21px "Kanit", sans-serif;
+  height: 22px;
+  margin: 0px 23px 0px 0px;
+  text-align: right;
+}
+
+.details_pet_modal .modal-footer .button_group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.toast .toast-header {
+  background: #ff5c4c;
+  color: #fff;
+}
+
+.toast .added_pet_name {
+  font-weight: bold;
+}
+
+.btn_add_pet_to_shelter,
+.btn_adopt_pet,
+.btn_update_pet,
+.btn_like_pet,
+.btn_add_pet_process {
+  background: #ff5c4c;
+  color: #fff;
+  font: 14px/21px "Kanit", sans-serif;
+  height: 35px;
+  margin: 0px 17px 0px 0px;
+  padding: 6px 7px 9px 0px;
+}
+
+.btn_add_pet_to_shelter:hover,
+.btn_adopt_pet:hover,
+.btn_update_pet:hover,
+.btn_like_pet:hover,
+.btn_add_pet_process:hover {
+  color: #fff;
+}
+
+.btn_add_pet_to_shelter i,
+.btn_adopt_pet i,
+.btn_update_pet i,
+.btn_like_pet i,
+.btn_add_pet_process i {
+  margin: 0px 10px;
+}
+
+.btn_like_pet {
+  background: #f5c388;
+}
+
+.btn_add_pet_process {
+  background: #ff5c4c;
+  margin: 0px 17px 0px 0px;
+  padding: 6.68px 9px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*reset*/
+.form-control:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+body {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f5f9fa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body #banner {
+  font-family: "Do Hyeon", sans-serif;
+  position: relative;
+  width: 861px;
+}
+
+body #banner h1 {
+  color: #141414;
+  font-size: 48px;
+  width: 264px;
+}
+
+body #banner h1 #adopt {
+  color: #ff5c4c;
+}
+
+body #banner h1 #shop {
+  color: #bdbdbd;
+}
+
+body #banner p {
+  color: #bdbdbd;
+  width: 300px;
+}
+
+body #banner img {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 595.32px;
+}
+
+body main {
+  font-family: "Kanit", sans-serif;
+  margin: 60px 0px 0px 0px;
+  width: 861px;
+}
+
+body main h2 {
+  font-size: 24px;
+  margin: 0px 0px 30px 0px;
+  text-align: center;
+}
+
+body main table {
+  width: 100%;
+}
+
+body main table tr {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  -webkit-box-shadow: 0px 8px 40px 0px rgba(34, 69, 82, 0.05);
+          box-shadow: 0px 8px 40px 0px rgba(34, 69, 82, 0.05);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 69px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0px 0px 5px 0px;
+}
+
+body main table tr td:nth-child(1) {
+  margin: 0px 0px 0px 24px;
+  width: 230px;
+}
+
+body main table tr td:nth-child(2) {
+  width: 100px;
+}
+
+body main table tr td:nth-child(3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0px 24.5px 0px 0px;
+}
+
+body main table tr td:nth-child(3) button {
+  background: transparent;
+  border: none;
+  color: #bdbdbd;
+  font-size: 18px;
+}
+
+body main table tr td:nth-child(3) button i.fas, body main table tr td:nth-child(3) button i.far {
+  margin: 0px 14px 0px 34px;
+}
+
+body main table tr td:nth-child(3) button:hover {
+  color: #bdbdbd;
+}
+
+body footer {
+  color: #bdbdbd;
+  font: 14px/21px "Kanit", sans-serif;
+  letter-spacing: 2px;
+  margin: 50px 0px;
+  text-align: center;
+}
+
+body footer a {
+  color: #ff5c4c;
 }
 /*# sourceMappingURL=styles.css.map */

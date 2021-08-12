@@ -1,0 +1,31 @@
+.btn_add_pet_to_shelter,
+.btn_adopt_pet,
+.btn_update_pet {
+	background: $light_pink;
+	color: $white;
+	font: 14px/21px $kanit_font;
+	height: 35px;
+	margin: 0px 17px 0px 0px;
+	padding: 6px 7px 9px 0px;
+
+	&:hover {
+		color: $white;
+	}
+
+	i {
+		margin: 0px 10px;
+	}
+}
+
+.btn_like_pet {
+    @extend .btn_update_pet;
+	background: #f5c388;
+   
+}
+
+.btn_add_pet_process {
+    @extend .btn_update_pet;
+	background: $light_pink;
+	margin: 0px 17px 0px 0px;
+	padding:  6.68px 9px;
+}

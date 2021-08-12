@@ -76,9 +76,9 @@ function loadPets() {
 	
 	for (let index = 0; index < all_pets.length; index++) {
 		pets += `<tr data-pet-id="${all_pets[index].id}">`;
-		pets += `   <td class="pet_name">${all_pets[index].pet_name}</td>`;
-		pets += `   <td class="pet_type">${all_pets[index].pet_type}</td>`;
-		pets += `   <td class="actions">`;
+		pets += `   <td>${all_pets[index].pet_name}</td>`;
+		pets += `   <td>${all_pets[index].pet_type}</td>`;
+		pets += `   <td>`;
 		pets += `    <button class="details_pet_open_modal" data-toggle="modal" data-target=".details_pet_modal"><i class="far fa-list-alt"></i> Details</button>`;
 		pets += `    <button data-toggle="modal" class="edit_pet_open_modal" data-target=".edit_pet_modal"
         ><i class="fas fa-pen-square"></i> Edit</button

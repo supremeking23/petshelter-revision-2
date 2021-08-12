@@ -1,0 +1,40 @@
+nav {
+	align-items: center;
+	background: $white;
+	box-shadow: 0px 8px 40px 0px rgba(34, 69, 82, 0.15);
+	display: flex;
+	flex-direction: row;
+	height: 69px;
+	justify-content: space-between;
+	margin: 30px 190px 40px 189px;
+	width: 901px;
+
+	.brand {
+		color: $black_secondary;
+		font: 24px $dohyeon_font;
+		margin: 23px 288px 24px 24px;
+	}
+
+	.nav_links {
+		align-items: center;
+		display: flex;
+		list-style-type:none;
+		margin: 0px 24px 0px 0px;
+		
+		li {
+			a {
+				color: $light_gray_secondary;
+				font-family: $kanit_font;
+				font-size: 14px;
+				margin: 23px 48px 24px 0px;
+				&.active {
+					color: $light_pink;
+				}
+			}
+
+			button {
+				margin: 1px 0px 0px 0px;
+			}
+		}
+	}
+}
