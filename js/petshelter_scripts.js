@@ -1,3 +1,6 @@
+
+import all_pets from './pets_data.js';
+
 $(document).ready(function () {
 	loadPets();
 	$("body")
@@ -6,38 +9,8 @@ $(document).ready(function () {
 			.on("submit","#add_pet_form", addPetAction)
 			.on("submit","#edit_pet_form", updatePetAction)
 			.on("input","#add_pet_form #pet_name", checkInput)
-			.on('hidden.bs.modal',"#add_pet_to_shelter_modal",clearAddPetForm);
-
-			
+			.on('hidden.bs.modal',"#add_pet_to_shelter_modal",clearAddPetForm);		
 });
-
-let all_pets = [
-	{
-		id: 1,
-		pet_name: "Garfield",
-		pet_type: "Cat",
-	},
-	{
-		id: 2,
-		pet_name: "Doreamon",
-		pet_type: "Cat",
-	},
-	{
-		id: 3,
-		pet_name: "Snoopy",
-		pet_type: "Dog",
-	},
-	{
-		id: 4,
-		pet_name: "Daffy",
-		pet_type: "Duck",
-	},
-	{
-		id: 5,
-		pet_name: "Pen Pen",
-		pet_type: "Penguin",
-	},
-];
 
 /**
 *   DOCU: This function is used to clear form field in the add_pet_to_shelter_modal <br />
