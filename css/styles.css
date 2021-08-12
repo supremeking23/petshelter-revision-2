@@ -249,8 +249,9 @@ nav .nav_links li button {
 
 .btn_add_pet_to_shelter,
 .btn_adopt_pet,
+.btn_update_pet,
 .btn_like_pet,
-.btn_update_pet {
+.btn_add_pet_process {
   background: #ff5c4c;
   color: #fff;
   font: 14px/21px "Kanit", sans-serif;
@@ -261,37 +262,28 @@ nav .nav_links li button {
 
 .btn_add_pet_to_shelter:hover,
 .btn_adopt_pet:hover,
+.btn_update_pet:hover,
 .btn_like_pet:hover,
-.btn_update_pet:hover {
+.btn_add_pet_process:hover {
   color: #fff;
 }
 
 .btn_add_pet_to_shelter i,
 .btn_adopt_pet i,
+.btn_update_pet i,
 .btn_like_pet i,
-.btn_update_pet i {
+.btn_add_pet_process i {
   margin: 0px 10px;
 }
 
 .btn_like_pet {
   background: #f5c388;
-  color: #fff;
 }
 
 .btn_add_pet_process {
   background: #ff5c4c;
-  color: #fff;
-  font: 14px/21px "Kanit", sans-serif;
   margin: 0px 17px 0px 0px;
-  padding: 5.72 0px 6.68px 0px;
-}
-
-.btn_add_pet_process:hover {
-  color: #fff;
-}
-
-.btn_add_pet_process i {
-  margin: 0px 10px;
+  padding: 6.68px 9px;
 }
 
 * {
