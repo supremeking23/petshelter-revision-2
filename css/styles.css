@@ -31,7 +31,7 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #ffffff;
+  background: #fff;
   -webkit-box-shadow: 0px 8px 40px 0px rgba(34, 69, 82, 0.15);
           box-shadow: 0px 8px 40px 0px rgba(34, 69, 82, 0.15);
   display: -webkit-box;
@@ -101,9 +101,12 @@ nav .nav_links li button {
   font-weight: bold;
 }
 
+.modal .modal-dialog .modal-content .modal-body {
+  font: 14px/24px "Kanit", sans-serif;
+}
+
 .modal .modal-dialog .modal-content .modal-body label {
   color: #bdbdbd;
-  font: 14px;
   margin: 0px 0px 20px 0px;
   width: 100px;
 }
@@ -127,9 +130,7 @@ nav .nav_links li button {
   box-sizing: border-box;
   color: #333333;
   display: inline-block;
-  font-size: 14px;
-  font: inherit;
-  line-height: 1.5em;
+  line-height: 24px;
   margin: 0;
   padding: 0.5em 3.5em 0.5em 1em;
 }
@@ -151,8 +152,9 @@ nav .nav_links li button {
 .btn_update_pet {
   background: #ff5c4c;
   color: #fff;
-  font-size: 14px;
-  margin-right: 17px;
+  font: 14px/21px "Kanit", sans-serif;
+  height: 35px;
+  margin: 0px 17px 0px 0px;
   padding: 6px 7px 9px 0px;
 }
 
@@ -167,8 +169,7 @@ nav .nav_links li button {
 .btn_adopt_pet i,
 .btn_like_pet i,
 .btn_update_pet i {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 0px 10px;
 }
 
 .btn_like_pet {
@@ -194,14 +195,10 @@ nav .nav_links li button {
 
 .details_pet_modal .modal-footer p {
   color: #bdbdbd;
-  font-family: "Kanit", sans-serif;
-  font-size: 18px;
+  font: 18px/21px "Kanit", sans-serif;
   height: 22px;
-  margin-left: 0px !important;
-  margin-right: 23px;
-  margin-top: 0px !important;
+  margin: 0px 23px 0px 0px;
   text-align: right;
-  width: 100px !important;
 }
 
 .details_pet_modal .modal-footer .button_group {
@@ -213,8 +210,8 @@ nav .nav_links li button {
 .btn_add_pet_process {
   background: #ff5c4c;
   color: #fff;
-  font-size: 14px;
-  margin-right: 17px;
+  font: 14px/21px "Kanit", sans-serif;
+  margin: 0px 17px 0px 0px;
   padding: 5.72 0px 6.68px 0px;
 }
 
@@ -223,8 +220,7 @@ nav .nav_links li button {
 }
 
 .btn_add_pet_process i {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 0px 10px;
 }
 
 #banner {
@@ -289,11 +285,11 @@ main table tr {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 5px;
+  margin: 0px 0px 5px 0px;
 }
 
 main table tr td.pet_name {
-  margin-left: 24px;
+  margin: 0px 0px 0px 24px;
   width: 230px;
 }
 
@@ -308,7 +304,7 @@ main table tr td.actions {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-right: 24.5px;
+  margin: 0px 24.5px 0px 0px;
 }
 
 main table tr td.actions button {
@@ -319,8 +315,7 @@ main table tr td.actions button {
 }
 
 main table tr td.actions button i.fas, main table tr td.actions button i.far {
-  margin-left: 34px;
-  margin-right: 14px;
+  margin: 0px 14px 0px 34px;
 }
 
 main table tr td.actions button:hover {
@@ -329,8 +324,7 @@ main table tr td.actions button:hover {
 
 footer {
   color: #bdbdbd;
-  font-family: "Kanit", sans-serif;
-  font-size: 14px;
+  font: 14px/21px "Kanit", sans-serif;
   letter-spacing: 2px;
   margin: 50px 0px;
   text-align: center;
@@ -341,10 +335,8 @@ footer a {
 }
 
 .form_shake {
-  -webkit-animation: shake 0.5s;
-          animation: shake 0.5s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
+  -webkit-animation: shake 0.5s 1;
+          animation: shake 0.5s 1;
   border: 2px solid red !important;
 }
 
