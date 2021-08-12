@@ -35,9 +35,11 @@ body {
 			color: $black_secondary;
 			font-size: 48px;
 			width: 264px;
+			
 			#adopt {
 				color: $light_pink;
 			}
+			
 			#shop {
 				color: $light_gray_secondary;
 			}
@@ -58,12 +60,13 @@ body {
 	}
 	
 	main {
-		font-family: "Kanit", sans-serif;
-		margin-top: 60px;
+		font-family: $kanit_font;
+		margin: 60px 0px 0px 0px;
 		width: 861px;
+		
 		h2 {
 			font-size: 24px;
-			margin-bottom: 30px;
+			margin: 0px 0px 30px 0px;
 			text-align: center;
 		}
 	

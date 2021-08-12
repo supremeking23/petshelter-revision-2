@@ -1,5 +1,4 @@
 /* reading is from top to bottom */
-/*variables*/
 /*background*/
 .form_shake {
   -webkit-animation: shake 0.5s 1;
@@ -155,7 +154,6 @@ nav .nav_links li button {
   margin: 1px 0px 0px 0px;
 }
 
-/*modal*/
 .modal .modal-dialog .modal-content .modal-header {
   border-bottom: none;
 }
@@ -357,13 +355,13 @@ body #banner img {
 
 body main {
   font-family: "Kanit", sans-serif;
-  margin-top: 60px;
+  margin: 60px 0px 0px 0px;
   width: 861px;
 }
 
 body main h2 {
   font-size: 24px;
-  margin-bottom: 30px;
+  margin: 0px 0px 30px 0px;
   text-align: center;
 }
 
