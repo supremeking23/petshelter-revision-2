@@ -4,12 +4,12 @@ import all_pets from './pets_data.js';
 $(document).ready(function () {
 	loadPets();
 	$("body")
-			.on("click", ".details_pet_open_modal", showPetDetailsModal)
-			.on("click", ".edit_pet_open_modal", editPetDetailsModal)
-			.on("submit","#add_pet_form", addPetAction)
-			.on("submit","#edit_pet_form", updatePetAction)
-			.on("input","#add_pet_form #pet_name", checkInput)
-			.on('hidden.bs.modal',"#add_pet_to_shelter_modal",clearAddPetForm);		
+			.on("click", ".details_pet_open_modal", showPetDetailsModal)         /* This function is responsible to show pet detail modal  */		
+			.on("click", ".edit_pet_open_modal", editPetDetailsModal)            /* This function is responsible to show edit pet modal  */
+			.on("submit","#add_pet_form", addPetAction)							 /* This function is responsible for add pet submission  */
+			.on("submit","#edit_pet_form", updatePetAction)						 /* This function is responsible for edit pet submission  */
+			.on("input","#add_pet_form #pet_name", checkInput)					 /* This function is responsible for checking whether the text input in add form is empty or not  */  	
+			.on('hidden.bs.modal',"#add_pet_to_shelter_modal",clearAddPetForm);  /* This function is responsible for reseting form fields in add pet  */		
 });
 
 /**
@@ -19,11 +19,10 @@ $(document).ready(function () {
 *   @author Ivan Christian Jay
 */
 function clearAddPetForm(){
-	let add_pet_to_shelter_modal = $(this)
-	let pet_name = add_pet_to_shelter_modal.find("#pet_name");
+	let add_pet_to_shelter_modal = $(this);
 	
 	add_pet_to_shelter_modal.find("#pet_type").val($("#pet_type option:first").val());
-	pet_name.val("");
+	add_pet_to_shelter_modal.find("#pet_name").val("").removeClass("form_shake");
 }
 
 /**
@@ -87,7 +86,11 @@ function addPetAction() {
 			pet_type: pet_type.val(),
 		});
 
+		/** 
+		* will load pets	
+		**/
 		loadPets();
+
 		$(".toast").toast("show");
 		$(".added_pet_name").html(pet_name.val());
 
@@ -124,9 +127,7 @@ function editPetDetailsModal(e) {
 
 	edit_pet_modal.find(".pet_id").val(selected_pet[0].id);
 	edit_pet_modal.find(".pet_name").text(`${selected_pet[0].pet_name}`);
-	edit_pet_modal
-				  .find(`.pet_type option:contains("${selected_pet[0].pet_type}")`)
-				  .prop("selected", true);
+	edit_pet_modal.find(`.pet_type option:contains("${selected_pet[0].pet_type}")`).prop("selected", true);
 }
 
 /**
@@ -138,6 +139,10 @@ function editPetDetailsModal(e) {
 function updatePetAction() {
 	all_pets[all_pets.findIndex((pet) => pet.id === parseInt($(".pet_id").val()))].pet_type = $("#pet_type_edit").val();
 	$(".edit_pet_modal").modal("hide");
+	/** 
+	* will load pets	
+	**/
 	loadPets();
+
 	return false;
 }
